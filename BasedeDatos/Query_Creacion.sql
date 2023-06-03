@@ -95,8 +95,10 @@ CREATE TABLE TutoriasAcademicas (
 	Duracion TIME,
 	Fecha DATETIME NOT NULL,
 	NumSesion INT NOT NULL,
+	IDRolAcademico INT NOT NULL,
 	IDReporteTutoria INT,
 	IDPeriodoEscolar INT NOT NULL,
+	FOREIGN KEY (IDRolAcademico) REFERENCES RolesAcademicos(IDRolAcademico),
 	FOREIGN KEY (IDReporteTutoria) REFERENCES ReportesTutoria(IDReporteTutoria),
 	FOREIGN KEY (IDPeriodoEscolar) REFERENCES PeriodosEscolares(IDPeriodoEscolar)
 );
@@ -118,9 +120,9 @@ CREATE TABLE ProblematicasAcademicas (
 	Estado NVARCHAR(15) NOT NULL,
 	Descripcion NTEXT NOT NULL,
 	IDCategoria INT NOT NULL,
-	IDTutoriaAcademica INT NOT NULL,
+	IDTutoriaAcademicaEstudiante INT NOT NULL,
 	NRC INT,
 	FOREIGN KEY (IDCategoria) REFERENCES CategoriasProblematica(IDCategoria),
-	FOREIGN KEY (IDTutoriaAcademica) REFERENCES TutoriasAcademicas(IDTutoriaAcademica),
+	FOREIGN KEY (IDTutoriaAcademicaEstudiante) REFERENCES TutoriasAcademicasEstudiantes(IDTutoriaAcademicaEstudiante),
 	FOREIGN KEY (NRC) REFERENCES ExperienciasEducativas(NRC)
 );
