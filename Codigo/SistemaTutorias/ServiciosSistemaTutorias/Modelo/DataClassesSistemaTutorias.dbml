@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SistemaTutorias" Class="DataClassesSistemaTutoriasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Academicos" Member="Academicos">
+    <Type Name="Academicos">
+      <Column Name="NumPersonal" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombres" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoPaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApellidoMaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="Academicos_ExperienciasEducativas" Member="ExperienciasEducativas" ThisKey="NumPersonal" OtherKey="NumPersonal" Type="ExperienciasEducativas" />
+      <Association Name="Academicos_RolesAcademicos" Member="RolesAcademicos" ThisKey="NumPersonal" OtherKey="NumPersonal" Type="RolesAcademicos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AreasAcademicas" Member="AreasAcademicas">
+    <Type Name="AreasAcademicas">
+      <Column Name="IDAreaAcademica" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Association Name="AreasAcademicas_ProgramasEducativos" Member="ProgramasEducativos" ThisKey="IDAreaAcademica" OtherKey="IDAreaAcademica" Type="ProgramasEducativos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoriasProblematica" Member="CategoriasProblematica">
+    <Type Name="CategoriasProblematica">
+      <Column Name="IDCategoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="CategoriasProblematica_ProblematicasAcademicas" Member="ProblematicasAcademicas" ThisKey="IDCategoria" OtherKey="IDCategoria" Type="ProblematicasAcademicas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estudiantes" Member="Estudiantes">
+    <Type Name="Estudiantes">
+      <Column Name="Matricula" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombres" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoPaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApellidoMaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="IDProgramaEducativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Estudiantes_ExperienciasEducativasEstudiantes" Member="ExperienciasEducativasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="ExperienciasEducativasEstudiantes" />
+      <Association Name="Estudiantes_TutoriasAcademicasEstudiantes" Member="TutoriasAcademicasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="TutoriasAcademicasEstudiantes" />
+      <Association Name="ProgramasEducativos_Estudiantes" Member="ProgramasEducativos" ThisKey="IDProgramaEducativo" OtherKey="IDProgramaEducativo" Type="ProgramasEducativos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExperienciasEducativas" Member="ExperienciasEducativas">
+    <Type Name="ExperienciasEducativas">
+      <Column Name="NRC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Creditos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumPersonal" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="ExperienciasEducativas_ExperienciasEducativasEstudiantes" Member="ExperienciasEducativasEstudiantes" ThisKey="NRC" OtherKey="NRC" Type="ExperienciasEducativasEstudiantes" />
+      <Association Name="ExperienciasEducativas_ProblematicasAcademicas" Member="ProblematicasAcademicas" ThisKey="NRC" OtherKey="NRC" Type="ProblematicasAcademicas" />
+      <Association Name="Academicos_ExperienciasEducativas" Member="Academicos" ThisKey="NumPersonal" OtherKey="NumPersonal" Type="Academicos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExperienciasEducativasEstudiantes" Member="ExperienciasEducativasEstudiantes">
+    <Type Name="ExperienciasEducativasEstudiantes">
+      <Column Name="IDExperienciaEducativaEstudiante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NRC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Matricula" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="Estudiantes_ExperienciasEducativasEstudiantes" Member="Estudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="Estudiantes" IsForeignKey="true" />
+      <Association Name="ExperienciasEducativas_ExperienciasEducativasEstudiantes" Member="ExperienciasEducativas" ThisKey="NRC" OtherKey="NRC" Type="ExperienciasEducativas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PeriodosEscolares" Member="PeriodosEscolares">
+    <Type Name="PeriodosEscolares">
+      <Column Name="IDPeriodoEscolar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="PeriodosEscolares_TutoriasAcademicas" Member="TutoriasAcademicas" ThisKey="IDPeriodoEscolar" OtherKey="IDPeriodoEscolar" Type="TutoriasAcademicas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProblematicasAcademicas" Member="ProblematicasAcademicas">
+    <Type Name="ProblematicasAcademicas">
+      <Column Name="IDProblematicaAcademica" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IDCategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDTutoriaAcademicaEstudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NRC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CategoriasProblematica_ProblematicasAcademicas" Member="CategoriasProblematica" ThisKey="IDCategoria" OtherKey="IDCategoria" Type="CategoriasProblematica" IsForeignKey="true" />
+      <Association Name="ExperienciasEducativas_ProblematicasAcademicas" Member="ExperienciasEducativas" ThisKey="NRC" OtherKey="NRC" Type="ExperienciasEducativas" IsForeignKey="true" />
+      <Association Name="TutoriasAcademicasEstudiantes_ProblematicasAcademicas" Member="TutoriasAcademicasEstudiantes" ThisKey="IDTutoriaAcademicaEstudiante" OtherKey="IDTutoriaAcademicaestudiante" Type="TutoriasAcademicasEstudiantes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProgramasEducativos" Member="ProgramasEducativos">
+    <Type Name="ProgramasEducativos">
+      <Column Name="IDProgramaEducativo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IDAreaAcademica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ProgramasEducativos_Estudiantes" Member="Estudiantes" ThisKey="IDProgramaEducativo" OtherKey="IDProgramaEducativo" Type="Estudiantes" />
+      <Association Name="AreasAcademicas_ProgramasEducativos" Member="AreasAcademicas" ThisKey="IDAreaAcademica" OtherKey="IDAreaAcademica" Type="AreasAcademicas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportesGenerales" Member="ReportesGenerales">
+    <Type Name="ReportesGenerales">
+      <Column Name="IDReporteGeneral" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ComentarioGeneral" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="IDRolAcademico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RolesAcademicos_ReportesGenerales" Member="RolesAcademicos" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="RolesAcademicos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportesTutoria" Member="ReportesTutoria">
+    <Type Name="ReportesTutoria">
+      <Column Name="IDReporteTutoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ComentarioGeneral" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="IDTutoriaAcademica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ReportesTutoria_TutoriasAcademicas" Member="TutoriasAcademicas1" ThisKey="IDReporteTutoria" OtherKey="IDReporteTutoria" Type="TutoriasAcademicas" />
+      <Association Name="TutoriasAcademicas_ReportesTutoria" Member="TutoriasAcademicas" ThisKey="IDTutoriaAcademica" OtherKey="IDTutoriaAcademica" Type="TutoriasAcademicas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Roles">
+      <Column Name="IDRol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreRol" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Roles_RolesAcademicos" Member="RolesAcademicos" ThisKey="IDRol" OtherKey="IDRol" Type="RolesAcademicos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RolesAcademicos" Member="RolesAcademicos">
+    <Type Name="RolesAcademicos">
+      <Column Name="IDRolAcademico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="IDRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumPersonal" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="RolesAcademicos_ReportesGenerales" Member="ReportesGenerales" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="ReportesGenerales" />
+      <Association Name="RolesAcademicos_TutoriasAcademicas" Member="TutoriasAcademicas" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="TutoriasAcademicas" />
+      <Association Name="Roles_RolesAcademicos" Member="Roles" ThisKey="IDRol" OtherKey="IDRol" Type="Roles" IsForeignKey="true" />
+      <Association Name="Academicos_RolesAcademicos" Member="Academicos" ThisKey="NumPersonal" OtherKey="NumPersonal" Type="Academicos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TutoriasAcademicas" Member="TutoriasAcademicas">
+    <Type Name="TutoriasAcademicas">
+      <Column Name="IDTutoriaAcademica" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NumSesion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDRolAcademico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDReporteTutoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDPeriodoEscolar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TutoriasAcademicas_ReportesTutoria" Member="ReportesTutoria" ThisKey="IDTutoriaAcademica" OtherKey="IDTutoriaAcademica" Type="ReportesTutoria" />
+      <Association Name="TutoriasAcademicas_TutoriasAcademicasEstudiantes" Member="TutoriasAcademicasEstudiantes" ThisKey="IDTutoriaAcademica" OtherKey="IDTutoriaAcademica" Type="TutoriasAcademicasEstudiantes" />
+      <Association Name="PeriodosEscolares_TutoriasAcademicas" Member="PeriodosEscolares" ThisKey="IDPeriodoEscolar" OtherKey="IDPeriodoEscolar" Type="PeriodosEscolares" IsForeignKey="true" />
+      <Association Name="ReportesTutoria_TutoriasAcademicas" Member="ReportesTutoria1" ThisKey="IDReporteTutoria" OtherKey="IDReporteTutoria" Type="ReportesTutoria" IsForeignKey="true" />
+      <Association Name="RolesAcademicos_TutoriasAcademicas" Member="RolesAcademicos" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="RolesAcademicos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TutoriasAcademicasEstudiantes" Member="TutoriasAcademicasEstudiantes">
+    <Type Name="TutoriasAcademicasEstudiantes">
+      <Column Name="IDTutoriaAcademicaestudiante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDTutoriaAcademica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Matricula" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="TutoriasAcademicasEstudiantes_ProblematicasAcademicas" Member="ProblematicasAcademicas" ThisKey="IDTutoriaAcademicaestudiante" OtherKey="IDTutoriaAcademicaEstudiante" Type="ProblematicasAcademicas" />
+      <Association Name="TutoriasAcademicas_TutoriasAcademicasEstudiantes" Member="TutoriasAcademicas" ThisKey="IDTutoriaAcademica" OtherKey="IDTutoriaAcademica" Type="TutoriasAcademicas" IsForeignKey="true" />
+      <Association Name="Estudiantes_TutoriasAcademicasEstudiantes" Member="Estudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="Estudiantes" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
