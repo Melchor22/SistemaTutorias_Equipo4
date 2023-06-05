@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiciosSistemaTutorias.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,22 +13,9 @@ namespace ServiciosSistemaTutorias
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public MensajeInicioSesion iniciarSesion(string username, string password)
         {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return RolesAcademicosDAO.iniciarSesion(username, password);
         }
     }
 }
