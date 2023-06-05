@@ -45,29 +45,32 @@ namespace ClienteSistemaTutorias
         {
             using (var conexionServicios = new Service1Client())
             {
-                Mensaje resultado = await conexionServicios.iniciarSesionAsync(username, password);
+                MensajeInicioSesion resultado = await conexionServicios.iniciarSesionAsync(username, password);
                 if (resultado.error == true)
                 {
                     MessageBox.Show(resultado.mensaje, "Credenciales Incorrectas.");
                 }
                 else
                 {
-                    switch (resultado.usuarioLogin.IDRol)
+                    switch (resultado.usuarioRolAcademico.IDRol)
                     {
                         //Jefe de Carrera
                         case 1:
                             WindowJefeCarrera ventanaJefeCarrera = new WindowJefeCarrera();
                             ventanaJefeCarrera.Show();
+                            Close();
                             break;
                         //Coordinador
                         case 2:
                             WindowCoordinador ventanaCoordinador = new WindowCoordinador();
                             ventanaCoordinador.Show();
+                            Close();
                             break;
                         //Tutor
                         case 3:
                             WindowTutor ventanaTutor = new WindowTutor();
                             ventanaTutor.Show();
+                            Close();
                             break;
                     }
                 }

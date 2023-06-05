@@ -15,6 +15,6 @@ namespace ServiciosSistemaTutorias
     {
 
         [OperationContract]
-        Mensaje iniciarSesion(string username, string password);
+        MensajeInicioSesion iniciarSesion(string username, string password);
     }
 }

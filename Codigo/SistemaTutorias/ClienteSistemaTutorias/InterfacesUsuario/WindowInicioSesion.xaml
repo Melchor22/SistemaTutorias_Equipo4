@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClienteSistemaTutorias"
         mc:Ignorable="d"
-        Title="Inicio de Sesión" Height="450" Width="450" Icon="..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png">
+        Title="Inicio de Sesión" Height="450" Width="450" Icon="..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow">
     <Grid Width="NaN">
         <Label Content="Usuario:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="60,217,0,0"/>
         <Label Content="Contraseña:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,272,0,0" FontSize="20"/>

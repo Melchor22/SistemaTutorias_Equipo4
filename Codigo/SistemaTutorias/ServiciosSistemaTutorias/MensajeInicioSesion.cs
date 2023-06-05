@@ -8,13 +8,15 @@ using System.Web;
 namespace ServiciosSistemaTutorias
 {
     [DataContract]
-    public class Mensaje
+    public class MensajeInicioSesion
     {
         [DataMember]
         public Boolean error { get; set; }
         [DataMember]
         public string mensaje { get; set; }
         [DataMember]
-        public RolesAcademicos usuarioLogin { get; set; }
+        public RolesAcademicos usuarioRolAcademico { get; set; }
+        [DataMember]
+        public Academicos usuarioAcademico { get; set; }
     }
 }

@@ -8,28 +8,46 @@ namespace ServiciosSistemaTutorias.Modelo
 {
     public class RolesAcademicosDAO
     {
-        public static Mensaje iniciarSesion(string username, string password)
+        public static MensajeInicioSesion iniciarSesion(string username, string password)
         {
             DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
-            Mensaje mensaje = new Mensaje();
+            MensajeInicioSesion mensajeSesion = new MensajeInicioSesion();
             Console.WriteLine("Debug: username:" + username);
             Console.WriteLine("Debug: password:" + password);
-            var usuario = (from rolAcademico in conexionBD.RolesAcademicos
-                           where rolAcademico.NumPersonal == username && rolAcademico.Password == password
-                           select rolAcademico).FirstOrDefault();
-            if (usuario != null)
+            var rolacAcademicoBD = (from rolAcademico in conexionBD.RolesAcademicos
+                                    join academico in conexionBD.Academicos on rolAcademico.NumPersonal equals academico.NumPersonal
+                                    where rolAcademico.NumPersonal == username && rolAcademico.Password == password
+                                    select new {rolAcademico, academico}).FirstOrDefault();
+            if (rolacAcademicoBD != null)
             {
-                mensaje.error = false;
-                mensaje.mensaje = "Usuario NO encontrado. Verifica tus credenciales.";
-                mensaje.usuarioLogin = usuario;
-                Console.WriteLine("Debug: NumPersonal:" + usuario.NumPersonal);
+                mensajeSesion = new MensajeInicioSesion()
+                {
+                    error = false,
+                    mensaje = "Usuario Encontrado",
+                    usuarioRolAcademico = new RolesAcademicos()
+                    {
+                        IDRolAcademico = rolacAcademicoBD.rolAcademico.IDRolAcademico,
+                        NumPersonal = rolacAcademicoBD.rolAcademico.NumPersonal,
+                        Password = rolacAcademicoBD.rolAcademico.Password,
+                        IDRol = rolacAcademicoBD.rolAcademico.IDRol
+                    },
+                    usuarioAcademico = new Academicos()
+                    {
+                        NumPersonal = rolacAcademicoBD.academico.NumPersonal,
+                        Nombres = rolacAcademicoBD.academico.Nombres,
+                        ApellidoPaterno = rolacAcademicoBD.academico.ApellidoPaterno,
+                        ApellidoMaterno = rolacAcademicoBD.academico.ApellidoMaterno,
+                        Correo = rolacAcademicoBD.academico.Correo,
+                        Telefono = rolacAcademicoBD.academico.Telefono
+                    }
+                };
             }
             else
             {
-                mensaje.error = true;
-                mensaje.mensaje = "Usuario NO encontrado. Verifica tus credenciales.";
+                mensajeSesion.error = true;
+                mensajeSesion.mensaje = "Usuario NO encontrado. Verifica tus credenciales.";
             }
-            return mensaje;
+            return mensajeSesion;
         }
 
         public static DataClassesSistemaTutoriasDataContext getConnection()
