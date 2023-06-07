@@ -70,3 +70,7 @@ C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\Sistema
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowTutor.g.cs
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowCoordinador.baml
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowTutor.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowSesionesTutoria.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowSesionesTutoria.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowRegistrarSesionTutoria.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowRegistrarSesionTutoria.baml

@@ -25,20 +25,6 @@
       <Association Name="CategoriasProblematica_ProblematicasAcademicas" Member="ProblematicasAcademicas" ThisKey="IDCategoria" OtherKey="IDCategoria" Type="ProblematicasAcademicas" />
     </Type>
   </Table>
-  <Table Name="dbo.Estudiantes" Member="Estudiantes">
-    <Type Name="Estudiantes">
-      <Column Name="Matricula" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Nombres" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ApellidoPaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ApellidoMaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Correo" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
-      <Column Name="Telefono" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Column Name="IDProgramaEducativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Estudiantes_ExperienciasEducativasEstudiantes" Member="ExperienciasEducativasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="ExperienciasEducativasEstudiantes" />
-      <Association Name="Estudiantes_TutoriasAcademicasEstudiantes" Member="TutoriasAcademicasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="TutoriasAcademicasEstudiantes" />
-      <Association Name="ProgramasEducativos_Estudiantes" Member="ProgramasEducativos" ThisKey="IDProgramaEducativo" OtherKey="IDProgramaEducativo" Type="ProgramasEducativos" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.ExperienciasEducativas" Member="ExperienciasEducativas">
     <Type Name="ExperienciasEducativas">
       <Column Name="NRC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -55,8 +41,8 @@
       <Column Name="IDExperienciaEducativaEstudiante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="NRC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Matricula" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
-      <Association Name="Estudiantes_ExperienciasEducativasEstudiantes" Member="Estudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="Estudiantes" IsForeignKey="true" />
       <Association Name="ExperienciasEducativas_ExperienciasEducativasEstudiantes" Member="ExperienciasEducativas" ThisKey="NRC" OtherKey="NRC" Type="ExperienciasEducativas" IsForeignKey="true" />
+      <Association Name="Estudiantes_ExperienciasEducativasEstudiantes" Member="Estudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="Estudiantes" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PeriodosEscolares" Member="PeriodosEscolares">
@@ -123,6 +109,7 @@
       <Column Name="NumPersonal" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
       <Association Name="RolesAcademicos_ReportesGenerales" Member="ReportesGenerales" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="ReportesGenerales" />
       <Association Name="RolesAcademicos_TutoriasAcademicas" Member="TutoriasAcademicas" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="TutoriasAcademicas" />
+      <Association Name="RolesAcademicos_Estudiantes" Member="Estudiantes" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="Estudiantes" />
       <Association Name="Roles_RolesAcademicos" Member="Roles" ThisKey="IDRol" OtherKey="IDRol" Type="Roles" IsForeignKey="true" />
       <Association Name="Academicos_RolesAcademicos" Member="Academicos" ThisKey="NumPersonal" OtherKey="NumPersonal" Type="Academicos" IsForeignKey="true" />
     </Type>
@@ -151,6 +138,22 @@
       <Association Name="TutoriasAcademicasEstudiantes_ProblematicasAcademicas" Member="ProblematicasAcademicas" ThisKey="IDTutoriaAcademicaestudiante" OtherKey="IDTutoriaAcademicaEstudiante" Type="ProblematicasAcademicas" />
       <Association Name="TutoriasAcademicas_TutoriasAcademicasEstudiantes" Member="TutoriasAcademicas" ThisKey="IDTutoriaAcademica" OtherKey="IDTutoriaAcademica" Type="TutoriasAcademicas" IsForeignKey="true" />
       <Association Name="Estudiantes_TutoriasAcademicasEstudiantes" Member="Estudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="Estudiantes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estudiantes" Member="Estudiantes">
+    <Type Name="Estudiantes">
+      <Column Name="Matricula" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombres" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ApellidoPaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ApellidoMaterno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="IDRolAcademico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDProgramaEducativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Estudiantes_ExperienciasEducativasEstudiantes" Member="ExperienciasEducativasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="ExperienciasEducativasEstudiantes" />
+      <Association Name="Estudiantes_TutoriasAcademicasEstudiantes" Member="TutoriasAcademicasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="TutoriasAcademicasEstudiantes" />
+      <Association Name="ProgramasEducativos_Estudiantes" Member="ProgramasEducativos" ThisKey="IDProgramaEducativo" OtherKey="IDProgramaEducativo" Type="ProgramasEducativos" IsForeignKey="true" />
+      <Association Name="RolesAcademicos_Estudiantes" Member="RolesAcademicos" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="RolesAcademicos" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

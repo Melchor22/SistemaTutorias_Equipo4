@@ -9,6 +9,8 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow">
     <Grid>
-        
+        <Label x:Name="lbBienvenido" Content="." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontSize="20"/>
+        <Button x:Name="btSesionesTutoria" Content="Sesiones de Tutoría" HorizontalAlignment="Left" Margin="100,134,0,0" VerticalAlignment="Top" FontSize="20" Width="200" Height="50" Click="btSesionesTutoria_Click"/>
+
     </Grid>
 </Window>

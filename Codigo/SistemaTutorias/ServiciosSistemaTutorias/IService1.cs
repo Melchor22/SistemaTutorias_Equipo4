@@ -16,5 +16,14 @@ namespace ServiciosSistemaTutorias
 
         [OperationContract]
         MensajeInicioSesion iniciarSesion(string username, string password);
+
+        [OperationContract]
+        TutoriaPeriodo[] obtenerTutoriasAcademicas(int IDRolAcademico);
+
+        [OperationContract]
+        List<PeriodosEscolares> obtenerPeriodosEscolares();
+
+        [OperationContract]
+        Boolean registrarTutoriaAcademica(TutoriasAcademicas tutoriaNueva);
     }
 }

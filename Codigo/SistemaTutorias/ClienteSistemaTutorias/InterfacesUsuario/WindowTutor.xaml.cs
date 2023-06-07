@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,23 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
     /// </summary>
     public partial class WindowTutor : Window
     {
-        public WindowTutor()
+        RolesAcademicos rolAcademico;
+        Academicos academico;
+        MensajeInicioSesion usuarioTutor;
+        public WindowTutor(MensajeInicioSesion usuario)
         {
             InitializeComponent();
+            rolAcademico = usuario.usuarioRolAcademico;
+            academico = usuario.usuarioAcademico;
+            usuarioTutor = usuario;
+            lbBienvenido.Content ="Bienvenido(a): " + academico.Nombres + " " + academico.ApellidoPaterno + " " + academico.ApellidoMaterno;
+        }
+
+        private void btSesionesTutoria_Click(object sender, RoutedEventArgs e)
+        {
+            WindowSesionesTutoria ventanaSesionesTutoria = new WindowSesionesTutoria(usuarioTutor);
+            ventanaSesionesTutoria.Show();
+            Close();
         }
     }
 }

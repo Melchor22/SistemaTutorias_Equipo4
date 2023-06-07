@@ -52,28 +52,32 @@ namespace ClienteSistemaTutorias
                 }
                 else
                 {
-                    switch (resultado.usuarioRolAcademico.IDRol)
-                    {
-                        //Jefe de Carrera
-                        case 1:
-                            WindowJefeCarrera ventanaJefeCarrera = new WindowJefeCarrera();
-                            ventanaJefeCarrera.Show();
-                            Close();
-                            break;
-                        //Coordinador
-                        case 2:
-                            WindowCoordinador ventanaCoordinador = new WindowCoordinador();
-                            ventanaCoordinador.Show();
-                            Close();
-                            break;
-                        //Tutor
-                        case 3:
-                            WindowTutor ventanaTutor = new WindowTutor();
-                            ventanaTutor.Show();
-                            Close();
-                            break;
-                    }
+                    AbrirVentanaDestino(resultado);
                 }
+            }
+        }
+        private void AbrirVentanaDestino(MensajeInicioSesion usuario)
+        {
+            switch (usuario.usuarioRolAcademico.IDRol)
+            {
+                //Jefe de Carrera
+                case 1:
+                    WindowJefeCarrera ventanaJefeCarrera = new WindowJefeCarrera(usuario);
+                    ventanaJefeCarrera.Show();
+                    Close();
+                    break;
+                //Coordinador
+                case 2:
+                    WindowCoordinador ventanaCoordinador = new WindowCoordinador(usuario);
+                    ventanaCoordinador.Show();
+                    Close();
+                    break;
+                //Tutor
+                case 3:
+                    WindowTutor ventanaTutor = new WindowTutor(usuario);
+                    ventanaTutor.Show();
+                    Close();
+                    break;
             }
         }
     }
