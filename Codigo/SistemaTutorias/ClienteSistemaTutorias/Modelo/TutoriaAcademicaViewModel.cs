@@ -26,11 +26,13 @@ namespace ClienteSistemaTutorias.Modelo
                 TutoriaPeriodo[] tutoriaServicio = await conexionServicio.obtenerTutoriasAcademicasAsync(IDRolAcademico);
                 foreach (var tutoria in tutoriaServicio)
                 {
+                    DateTime fechaInicio = (DateTime)tutoria.periodoEscolar.FechaInicio;
+                    DateTime fechaFin = (DateTime)tutoria.periodoEscolar.FechaFin;
                     DatosTutoria datosTutoria = new DatosTutoria()
                     {
-                        fecha = tutoria.tutoria.Fecha,
-                        numSesion = tutoria.tutoria.NumSesion,
-                        periodoEscolar = tutoria.periodoEscolar.FechaInicio.ToString("MMM yyyy") + " - " + tutoria.periodoEscolar.FechaFin.ToString("MMM yyyy")
+                        fecha = (DateTime)tutoria.tutoria.Fecha,
+                        numSesion = (int)tutoria.tutoria.NumSesion,
+                        periodoEscolar = fechaInicio.ToString("MMM yyyy") + " - " + fechaFin.ToString("MMM yyyy")
                     };
                     tutoriaViewModel.Add(datosTutoria);
                 }

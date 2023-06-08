@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -56,11 +57,15 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
                 RegistrarSesionTutoria(fechaHora, numSesionRegistro, periodoSeleccionado);
             }
+            else
+            {
+                MessageBox.Show("Llene todos los campos.");
+            }
         }
         private bool VerificarCampos(string fechaObtenida, string horaObtenida)
         {
 
-            if (string.IsNullOrEmpty(fechaObtenida) || string.IsNullOrEmpty(horaObtenida))
+            if (string.IsNullOrEmpty(fechaObtenida) || string.IsNullOrEmpty(horaObtenida) || cbNumSesion.SelectedIndex == -1 || cbPeriodoEscolar.SelectedIndex == -1)
             {
                 return false;
             }
@@ -80,7 +85,9 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
                 foreach (PeriodosEscolares periodo in periodosObtenidos)
                 {
-                    string periodoFormateado = $"{periodo.FechaInicio.ToString("MMM yyyy")} - {periodo.FechaFin.ToString("MMM yyyy")}";
+                    DateTime fechaInicio = (DateTime)periodo.FechaInicio;
+                    DateTime fechaFin = (DateTime)periodo.FechaFin;
+                    string periodoFormateado = $"{fechaInicio.ToString("MMM yyyy")} - {fechaFin.ToString("MMM yyyy")}";
                     listaPeriodos.Add(periodoFormateado);
                 }
 

@@ -13,13 +13,14 @@ namespace ServiciosSistemaTutorias.Modelo
             try
             {
                 DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
                 PeriodosEscolares periodoTutoria = conexionBD.PeriodosEscolares.First(em => em.IDPeriodoEscolar.Equals(tutoriaNueva.IDPeriodoEscolar));
                 RolesAcademicos rolAcademicoTutoria = conexionBD.RolesAcademicos.First(em => em.IDRolAcademico.Equals(tutoriaNueva.IDRolAcademico));
                 var tutoria = new TutoriasAcademicas()
                 {
                     Fecha = tutoriaNueva.Fecha,
                     NumSesion = tutoriaNueva.NumSesion,
-                    IDPeriodoEscolar = periodoTutoria.IDPeriodoEscolar,
+                    IDPeriodoEscolar = tutoriaNueva.IDPeriodoEscolar,
                     IDRolAcademico = rolAcademicoTutoria.IDRolAcademico
                 };
                 Debug.WriteLine("Despues de crear tutoria");

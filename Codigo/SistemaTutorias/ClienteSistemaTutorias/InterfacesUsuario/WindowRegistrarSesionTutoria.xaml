@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario"
         mc:Ignorable="d"
-        Title="WindowRegistrarModificarSesionTutoria" Height="450" Width="800">
+        Title="Registrar Nueva Tutoria" Height="450" Width="800" Icon="..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow">
     <Grid>
         <Label Content="Fecha (DD/MM/YYYY):" HorizontalAlignment="Left" Margin="104,76,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="tbFecha" HorizontalAlignment="Left" Margin="104,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="20"/>
