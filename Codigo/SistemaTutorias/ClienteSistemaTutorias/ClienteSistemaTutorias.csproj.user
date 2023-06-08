@@ -13,6 +13,12 @@
     <Compile Update="InterfacesUsuario\WindowJefeCarrera.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="InterfacesUsuario\WindowRegistrarSesionTutoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\WindowSesionesTutoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="InterfacesUsuario\WindowTutor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +31,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\WindowJefeCarrera.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\WindowRegistrarSesionTutoria.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\WindowSesionesTutoria.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\WindowTutor.xaml">

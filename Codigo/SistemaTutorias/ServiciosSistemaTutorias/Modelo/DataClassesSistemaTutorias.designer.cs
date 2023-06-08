@@ -289,7 +289,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="NVarChar(50)")]
 		public string Nombres
 		{
 			get
@@ -508,7 +508,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="NVarChar(40)")]
 		public string Nombre
 		{
 			get
@@ -622,7 +622,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tipo", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tipo", DbType="NVarChar(100)")]
 		public string Tipo
 		{
 			get
@@ -706,7 +706,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _Telefono;
 		
-		private int _IDProgramaEducativo;
+		private System.Nullable<int> _IDProgramaEducativo;
 		
 		private EntitySet<ExperienciasEducativasEstudiantes> _ExperienciasEducativasEstudiantes;
 		
@@ -730,7 +730,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnCorreoChanged();
     partial void OnTelefonoChanging(string value);
     partial void OnTelefonoChanged();
-    partial void OnIDProgramaEducativoChanging(int value);
+    partial void OnIDProgramaEducativoChanging(System.Nullable<int> value);
     partial void OnIDProgramaEducativoChanged();
     #endregion
 		
@@ -762,7 +762,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="NVarChar(50)")]
 		public string Nombres
 		{
 			get
@@ -862,8 +862,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDProgramaEducativo", DbType="Int NOT NULL")]
-		public int IDProgramaEducativo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDProgramaEducativo", DbType="Int")]
+		public System.Nullable<int> IDProgramaEducativo
 		{
 			get
 			{
@@ -939,7 +939,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDProgramaEducativo = default(int);
+						this._IDProgramaEducativo = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("ProgramasEducativos");
 				}
@@ -1001,7 +1001,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _Nombre;
 		
-		private int _Creditos;
+		private System.Nullable<int> _Creditos;
 		
 		private string _NumPersonal;
 		
@@ -1019,7 +1019,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnNRCChanged();
     partial void OnNombreChanging(string value);
     partial void OnNombreChanged();
-    partial void OnCreditosChanging(int value);
+    partial void OnCreditosChanging(System.Nullable<int> value);
     partial void OnCreditosChanged();
     partial void OnNumPersonalChanging(string value);
     partial void OnNumPersonalChanged();
@@ -1053,7 +1053,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="NVarChar(100)")]
 		public string Nombre
 		{
 			get
@@ -1073,8 +1073,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creditos", DbType="Int NOT NULL")]
-		public int Creditos
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Creditos", DbType="Int")]
+		public System.Nullable<int> Creditos
 		{
 			get
 			{
@@ -1093,7 +1093,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumPersonal", DbType="NVarChar(25) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumPersonal", DbType="NVarChar(25)")]
 		public string NumPersonal
 		{
 			get
@@ -1230,7 +1230,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private int _IDExperienciaEducativaEstudiante;
 		
-		private int _NRC;
+		private System.Nullable<int> _NRC;
 		
 		private string _Matricula;
 		
@@ -1244,7 +1244,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnCreated();
     partial void OnIDExperienciaEducativaEstudianteChanging(int value);
     partial void OnIDExperienciaEducativaEstudianteChanged();
-    partial void OnNRCChanging(int value);
+    partial void OnNRCChanging(System.Nullable<int> value);
     partial void OnNRCChanged();
     partial void OnMatriculaChanging(string value);
     partial void OnMatriculaChanged();
@@ -1277,8 +1277,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NRC", DbType="Int NOT NULL")]
-		public int NRC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NRC", DbType="Int")]
+		public System.Nullable<int> NRC
 		{
 			get
 			{
@@ -1301,7 +1301,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Matricula", DbType="NVarChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Matricula", DbType="NVarChar(10)")]
 		public string Matricula
 		{
 			get
@@ -1386,7 +1386,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._NRC = default(int);
+						this._NRC = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("ExperienciasEducativas");
 				}
@@ -1422,9 +1422,9 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private int _IDPeriodoEscolar;
 		
-		private System.DateTime _FechaInicio;
+		private System.Nullable<System.DateTime> _FechaInicio;
 		
-		private System.DateTime _FechaFin;
+		private System.Nullable<System.DateTime> _FechaFin;
 		
 		private EntitySet<TutoriasAcademicas> _TutoriasAcademicas;
 		
@@ -1434,9 +1434,9 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnCreated();
     partial void OnIDPeriodoEscolarChanging(int value);
     partial void OnIDPeriodoEscolarChanged();
-    partial void OnFechaInicioChanging(System.DateTime value);
+    partial void OnFechaInicioChanging(System.Nullable<System.DateTime> value);
     partial void OnFechaInicioChanged();
-    partial void OnFechaFinChanging(System.DateTime value);
+    partial void OnFechaFinChanging(System.Nullable<System.DateTime> value);
     partial void OnFechaFinChanged();
     #endregion
 		
@@ -1466,8 +1466,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaInicio", DbType="DateTime NOT NULL")]
-		public System.DateTime FechaInicio
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaInicio", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FechaInicio
 		{
 			get
 			{
@@ -1486,8 +1486,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaFin", DbType="DateTime NOT NULL")]
-		public System.DateTime FechaFin
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaFin", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FechaFin
 		{
 			get
 			{
@@ -1564,9 +1564,9 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _Descripcion;
 		
-		private int _IDCategoria;
+		private System.Nullable<int> _IDCategoria;
 		
-		private int _IDTutoriaAcademicaEstudiante;
+		private System.Nullable<int> _IDTutoriaAcademicaEstudiante;
 		
 		private System.Nullable<int> _NRC;
 		
@@ -1586,9 +1586,9 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnEstadoChanged();
     partial void OnDescripcionChanging(string value);
     partial void OnDescripcionChanged();
-    partial void OnIDCategoriaChanging(int value);
+    partial void OnIDCategoriaChanging(System.Nullable<int> value);
     partial void OnIDCategoriaChanged();
-    partial void OnIDTutoriaAcademicaEstudianteChanging(int value);
+    partial void OnIDTutoriaAcademicaEstudianteChanging(System.Nullable<int> value);
     partial void OnIDTutoriaAcademicaEstudianteChanged();
     partial void OnNRCChanging(System.Nullable<int> value);
     partial void OnNRCChanged();
@@ -1622,7 +1622,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="NVarChar(15)")]
 		public string Estado
 		{
 			get
@@ -1642,7 +1642,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NText NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NText", UpdateCheck=UpdateCheck.Never)]
 		public string Descripcion
 		{
 			get
@@ -1662,8 +1662,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCategoria", DbType="Int NOT NULL")]
-		public int IDCategoria
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCategoria", DbType="Int")]
+		public System.Nullable<int> IDCategoria
 		{
 			get
 			{
@@ -1686,8 +1686,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTutoriaAcademicaEstudiante", DbType="Int NOT NULL")]
-		public int IDTutoriaAcademicaEstudiante
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTutoriaAcademicaEstudiante", DbType="Int")]
+		public System.Nullable<int> IDTutoriaAcademicaEstudiante
 		{
 			get
 			{
@@ -1761,7 +1761,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDCategoria = default(int);
+						this._IDCategoria = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("CategoriasProblematica");
 				}
@@ -1829,7 +1829,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDTutoriaAcademicaEstudiante = default(int);
+						this._IDTutoriaAcademicaEstudiante = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("TutoriasAcademicasEstudiantes");
 				}
@@ -1867,7 +1867,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _Nombre;
 		
-		private int _IDAreaAcademica;
+		private System.Nullable<int> _IDAreaAcademica;
 		
 		private EntitySet<Estudiantes> _Estudiantes;
 		
@@ -1881,7 +1881,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnIDProgramaEducativoChanged();
     partial void OnNombreChanging(string value);
     partial void OnNombreChanged();
-    partial void OnIDAreaAcademicaChanging(int value);
+    partial void OnIDAreaAcademicaChanging(System.Nullable<int> value);
     partial void OnIDAreaAcademicaChanged();
     #endregion
 		
@@ -1912,7 +1912,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="NVarChar(150)")]
 		public string Nombre
 		{
 			get
@@ -1932,8 +1932,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDAreaAcademica", DbType="Int NOT NULL")]
-		public int IDAreaAcademica
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDAreaAcademica", DbType="Int")]
+		public System.Nullable<int> IDAreaAcademica
 		{
 			get
 			{
@@ -1996,7 +1996,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDAreaAcademica = default(int);
+						this._IDAreaAcademica = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("AreasAcademicas");
 				}
@@ -2048,7 +2048,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _ComentarioGeneral;
 		
-		private int _IDRolAcademico;
+		private System.Nullable<int> _IDRolAcademico;
 		
 		private EntityRef<RolesAcademicos> _RolesAcademicos;
 		
@@ -2062,7 +2062,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnDescripcionChanged();
     partial void OnComentarioGeneralChanging(string value);
     partial void OnComentarioGeneralChanged();
-    partial void OnIDRolAcademicoChanging(int value);
+    partial void OnIDRolAcademicoChanging(System.Nullable<int> value);
     partial void OnIDRolAcademicoChanged();
     #endregion
 		
@@ -2092,7 +2092,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NText NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NText", UpdateCheck=UpdateCheck.Never)]
 		public string Descripcion
 		{
 			get
@@ -2112,7 +2112,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComentarioGeneral", DbType="NVarChar(500) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComentarioGeneral", DbType="NVarChar(500)")]
 		public string ComentarioGeneral
 		{
 			get
@@ -2132,8 +2132,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRolAcademico", DbType="Int NOT NULL")]
-		public int IDRolAcademico
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRolAcademico", DbType="Int")]
+		public System.Nullable<int> IDRolAcademico
 		{
 			get
 			{
@@ -2183,7 +2183,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDRolAcademico = default(int);
+						this._IDRolAcademico = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("RolesAcademicos");
 				}
@@ -2223,7 +2223,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _ComentarioGeneral;
 		
-		private int _IDTutoriaAcademica;
+		private System.Nullable<int> _IDTutoriaAcademica;
 		
 		private EntitySet<TutoriasAcademicas> _TutoriasAcademicas1;
 		
@@ -2239,7 +2239,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnDescripcionChanged();
     partial void OnComentarioGeneralChanging(string value);
     partial void OnComentarioGeneralChanged();
-    partial void OnIDTutoriaAcademicaChanging(int value);
+    partial void OnIDTutoriaAcademicaChanging(System.Nullable<int> value);
     partial void OnIDTutoriaAcademicaChanged();
     #endregion
 		
@@ -2270,7 +2270,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NText NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NText", UpdateCheck=UpdateCheck.Never)]
 		public string Descripcion
 		{
 			get
@@ -2290,7 +2290,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComentarioGeneral", DbType="NVarChar(500) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComentarioGeneral", DbType="NVarChar(500)")]
 		public string ComentarioGeneral
 		{
 			get
@@ -2310,8 +2310,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTutoriaAcademica", DbType="Int NOT NULL")]
-		public int IDTutoriaAcademica
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTutoriaAcademica", DbType="Int")]
+		public System.Nullable<int> IDTutoriaAcademica
 		{
 			get
 			{
@@ -2374,7 +2374,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDTutoriaAcademica = default(int);
+						this._IDTutoriaAcademica = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("TutoriasAcademicas");
 				}
@@ -2462,7 +2462,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreRol", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreRol", DbType="NVarChar(50)")]
 		public string NombreRol
 		{
 			get
@@ -2538,7 +2538,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _Password;
 		
-		private int _IDRol;
+		private System.Nullable<int> _IDRol;
 		
 		private string _NumPersonal;
 		
@@ -2558,7 +2558,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnIDRolAcademicoChanged();
     partial void OnPasswordChanging(string value);
     partial void OnPasswordChanged();
-    partial void OnIDRolChanging(int value);
+    partial void OnIDRolChanging(System.Nullable<int> value);
     partial void OnIDRolChanged();
     partial void OnNumPersonalChanging(string value);
     partial void OnNumPersonalChanged();
@@ -2593,7 +2593,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(20)")]
 		public string Password
 		{
 			get
@@ -2613,8 +2613,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRol", DbType="Int NOT NULL")]
-		public int IDRol
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRol", DbType="Int")]
+		public System.Nullable<int> IDRol
 		{
 			get
 			{
@@ -2637,7 +2637,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumPersonal", DbType="NVarChar(25) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumPersonal", DbType="NVarChar(25)")]
 		public string NumPersonal
 		{
 			get
@@ -2714,7 +2714,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDRol = default(int);
+						this._IDRol = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Roles");
 				}
@@ -2810,15 +2810,15 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private System.Nullable<System.TimeSpan> _Duracion;
 		
-		private System.DateTime _Fecha;
+		private System.Nullable<System.DateTime> _Fecha;
 		
-		private int _NumSesion;
+		private System.Nullable<int> _NumSesion;
 		
-		private int _IDRolAcademico;
+		private System.Nullable<int> _IDRolAcademico;
 		
 		private System.Nullable<int> _IDReporteTutoria;
 		
-		private int _IDPeriodoEscolar;
+		private System.Nullable<int> _IDPeriodoEscolar;
 		
 		private EntitySet<ReportesTutoria> _ReportesTutoria;
 		
@@ -2838,15 +2838,15 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnIDTutoriaAcademicaChanged();
     partial void OnDuracionChanging(System.Nullable<System.TimeSpan> value);
     partial void OnDuracionChanged();
-    partial void OnFechaChanging(System.DateTime value);
+    partial void OnFechaChanging(System.Nullable<System.DateTime> value);
     partial void OnFechaChanged();
-    partial void OnNumSesionChanging(int value);
+    partial void OnNumSesionChanging(System.Nullable<int> value);
     partial void OnNumSesionChanged();
-    partial void OnIDRolAcademicoChanging(int value);
+    partial void OnIDRolAcademicoChanging(System.Nullable<int> value);
     partial void OnIDRolAcademicoChanged();
     partial void OnIDReporteTutoriaChanging(System.Nullable<int> value);
     partial void OnIDReporteTutoriaChanged();
-    partial void OnIDPeriodoEscolarChanging(int value);
+    partial void OnIDPeriodoEscolarChanging(System.Nullable<int> value);
     partial void OnIDPeriodoEscolarChanged();
     #endregion
 		
@@ -2900,8 +2900,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="DateTime NOT NULL")]
-		public System.DateTime Fecha
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Fecha
 		{
 			get
 			{
@@ -2920,8 +2920,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumSesion", DbType="Int NOT NULL")]
-		public int NumSesion
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumSesion", DbType="Int")]
+		public System.Nullable<int> NumSesion
 		{
 			get
 			{
@@ -2940,8 +2940,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRolAcademico", DbType="Int NOT NULL")]
-		public int IDRolAcademico
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDRolAcademico", DbType="Int")]
+		public System.Nullable<int> IDRolAcademico
 		{
 			get
 			{
@@ -2988,8 +2988,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPeriodoEscolar", DbType="Int NOT NULL")]
-		public int IDPeriodoEscolar
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPeriodoEscolar", DbType="Int")]
+		public System.Nullable<int> IDPeriodoEscolar
 		{
 			get
 			{
@@ -3065,7 +3065,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDPeriodoEscolar = default(int);
+						this._IDPeriodoEscolar = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("PeriodosEscolares");
 				}
@@ -3133,7 +3133,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDRolAcademico = default(int);
+						this._IDRolAcademico = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("RolesAcademicos");
 				}
@@ -3193,7 +3193,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private int _IDTutoriaAcademicaestudiante;
 		
-		private int _IDTutoriaAcademica;
+		private System.Nullable<int> _IDTutoriaAcademica;
 		
 		private string _Matricula;
 		
@@ -3209,7 +3209,7 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnCreated();
     partial void OnIDTutoriaAcademicaestudianteChanging(int value);
     partial void OnIDTutoriaAcademicaestudianteChanged();
-    partial void OnIDTutoriaAcademicaChanging(int value);
+    partial void OnIDTutoriaAcademicaChanging(System.Nullable<int> value);
     partial void OnIDTutoriaAcademicaChanged();
     partial void OnMatriculaChanging(string value);
     partial void OnMatriculaChanged();
@@ -3243,8 +3243,8 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTutoriaAcademica", DbType="Int NOT NULL")]
-		public int IDTutoriaAcademica
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDTutoriaAcademica", DbType="Int")]
+		public System.Nullable<int> IDTutoriaAcademica
 		{
 			get
 			{
@@ -3267,7 +3267,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Matricula", DbType="NVarChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Matricula", DbType="NVarChar(10)")]
 		public string Matricula
 		{
 			get
@@ -3331,7 +3331,7 @@ namespace ServiciosSistemaTutorias.Modelo
 					}
 					else
 					{
-						this._IDTutoriaAcademica = default(int);
+						this._IDTutoriaAcademica = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("TutoriasAcademicas");
 				}

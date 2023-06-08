@@ -17,5 +17,21 @@ namespace ServiciosSistemaTutorias
         {
             return RolesAcademicosDAO.iniciarSesion(username, password);
         }
+
+        public List<PeriodosEscolares> obtenerPeriodosEscolares()
+        {
+            return PeriodosEscolaresDAO.obtenerPeriodosEscolares();
+        }
+
+        public TutoriaPeriodo[] obtenerTutoriasAcademicas(int IDRolAcademico)
+        {
+            TutoriaPeriodo[] tutoriasObtenidas = TutoriasAcademicasDAO.obtenerTutoriasAcademicas(IDRolAcademico);
+            return tutoriasObtenidas;
+        }
+
+        public bool registrarTutoriaAcademica(TutoriasAcademicas tutoriaNueva)
+        {
+            return TutoriasAcademicasDAO.registrarTutoriaAcademica(tutoriaNueva);
+        }
     }
 }

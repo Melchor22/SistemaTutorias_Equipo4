@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,13 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
     /// </summary>
     public partial class WindowJefeCarrera : Window
     {
-        public WindowJefeCarrera()
+        RolesAcademicos rolAcademico;
+        Academicos academico;
+        public WindowJefeCarrera(MensajeInicioSesion usuario)
         {
             InitializeComponent();
+            rolAcademico = usuario.usuarioRolAcademico;
+            academico = usuario.usuarioAcademico;
         }
     }
 }

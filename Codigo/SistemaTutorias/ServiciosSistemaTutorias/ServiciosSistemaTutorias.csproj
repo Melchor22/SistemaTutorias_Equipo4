@@ -73,12 +73,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesSistemaTutorias.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\PeriodosEscolaresDAO.cs" />
     <Compile Include="Modelo\RolesAcademicosDAO.cs" />
+    <Compile Include="Modelo\TutoriasAcademicasDAO.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TutoriaPeriodo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -214,7 +214,7 @@ namespace ServiceReference1
         
         private ServiceReference1.Academicos AcademicosField;
         
-        private int IDRolField;
+        private System.Nullable<int> IDRolField;
         
         private int IDRolAcademicoField;
         
@@ -242,7 +242,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDRol
+        public System.Nullable<int> IDRol
         {
             get
             {
@@ -341,7 +341,7 @@ namespace ServiceReference1
         
         private ServiceReference1.Academicos AcademicosField;
         
-        private int CreditosField;
+        private System.Nullable<int> CreditosField;
         
         private ServiceReference1.ExperienciasEducativasEstudiantes[] ExperienciasEducativasEstudiantesField;
         
@@ -367,7 +367,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Creditos
+        public System.Nullable<int> Creditos
         {
             get
             {
@@ -459,7 +459,7 @@ namespace ServiceReference1
         
         private string MatriculaField;
         
-        private int NRCField;
+        private System.Nullable<int> NRCField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ServiceReference1.Estudiantes Estudiantes
@@ -514,7 +514,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int NRC
+        public System.Nullable<int> NRC
         {
             get
             {
@@ -541,11 +541,11 @@ namespace ServiceReference1
         
         private ServiceReference1.ExperienciasEducativas ExperienciasEducativasField;
         
-        private int IDCategoriaField;
+        private System.Nullable<int> IDCategoriaField;
         
         private int IDProblematicaAcademicaField;
         
-        private int IDTutoriaAcademicaEstudianteField;
+        private System.Nullable<int> IDTutoriaAcademicaEstudianteField;
         
         private System.Nullable<int> NRCField;
         
@@ -604,7 +604,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDCategoria
+        public System.Nullable<int> IDCategoria
         {
             get
             {
@@ -630,7 +630,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDTutoriaAcademicaEstudiante
+        public System.Nullable<int> IDTutoriaAcademicaEstudiante
         {
             get
             {
@@ -683,7 +683,7 @@ namespace ServiceReference1
         
         private ServiceReference1.ExperienciasEducativasEstudiantes[] ExperienciasEducativasEstudiantesField;
         
-        private int IDProgramaEducativoField;
+        private System.Nullable<int> IDProgramaEducativoField;
         
         private string MatriculaField;
         
@@ -748,7 +748,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDProgramaEducativo
+        public System.Nullable<int> IDProgramaEducativo
         {
             get
             {
@@ -836,7 +836,7 @@ namespace ServiceReference1
         
         private ServiceReference1.Estudiantes[] EstudiantesField;
         
-        private int IDAreaAcademicaField;
+        private System.Nullable<int> IDAreaAcademicaField;
         
         private int IDProgramaEducativoField;
         
@@ -869,7 +869,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDAreaAcademica
+        public System.Nullable<int> IDAreaAcademica
         {
             get
             {
@@ -916,7 +916,7 @@ namespace ServiceReference1
         
         private ServiceReference1.Estudiantes EstudiantesField;
         
-        private int IDTutoriaAcademicaField;
+        private System.Nullable<int> IDTutoriaAcademicaField;
         
         private int IDTutoriaAcademicaestudianteField;
         
@@ -940,7 +940,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDTutoriaAcademica
+        public System.Nullable<int> IDTutoriaAcademica
         {
             get
             {
@@ -1065,17 +1065,17 @@ namespace ServiceReference1
         
         private System.Nullable<System.TimeSpan> DuracionField;
         
-        private System.DateTime FechaField;
+        private System.Nullable<System.DateTime> FechaField;
         
-        private int IDPeriodoEscolarField;
+        private System.Nullable<int> IDPeriodoEscolarField;
         
         private System.Nullable<int> IDReporteTutoriaField;
         
-        private int IDRolAcademicoField;
+        private System.Nullable<int> IDRolAcademicoField;
         
         private int IDTutoriaAcademicaField;
         
-        private int NumSesionField;
+        private System.Nullable<int> NumSesionField;
         
         private ServiceReference1.PeriodosEscolares PeriodosEscolaresField;
         
@@ -1101,7 +1101,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Fecha
+        public System.Nullable<System.DateTime> Fecha
         {
             get
             {
@@ -1114,7 +1114,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDPeriodoEscolar
+        public System.Nullable<int> IDPeriodoEscolar
         {
             get
             {
@@ -1140,7 +1140,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDRolAcademico
+        public System.Nullable<int> IDRolAcademico
         {
             get
             {
@@ -1166,7 +1166,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int NumSesion
+        public System.Nullable<int> NumSesion
         {
             get
             {
@@ -1302,16 +1302,16 @@ namespace ServiceReference1
     public partial class PeriodosEscolares : object
     {
         
-        private System.DateTime FechaFinField;
+        private System.Nullable<System.DateTime> FechaFinField;
         
-        private System.DateTime FechaInicioField;
+        private System.Nullable<System.DateTime> FechaInicioField;
         
         private int IDPeriodoEscolarField;
         
         private ServiceReference1.TutoriasAcademicas[] TutoriasAcademicasField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaFin
+        public System.Nullable<System.DateTime> FechaFin
         {
             get
             {
@@ -1324,7 +1324,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaInicio
+        public System.Nullable<System.DateTime> FechaInicio
         {
             get
             {
@@ -1375,7 +1375,7 @@ namespace ServiceReference1
         
         private int IDReporteTutoriaField;
         
-        private int IDTutoriaAcademicaField;
+        private System.Nullable<int> IDTutoriaAcademicaField;
         
         private ServiceReference1.TutoriasAcademicas TutoriasAcademicasField;
         
@@ -1421,7 +1421,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDTutoriaAcademica
+        public System.Nullable<int> IDTutoriaAcademica
         {
             get
             {
@@ -1524,7 +1524,7 @@ namespace ServiceReference1
         
         private int IDReporteGeneralField;
         
-        private int IDRolAcademicoField;
+        private System.Nullable<int> IDRolAcademicoField;
         
         private ServiceReference1.RolesAcademicos RolesAcademicosField;
         
@@ -1568,7 +1568,7 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IDRolAcademico
+        public System.Nullable<int> IDRolAcademico
         {
             get
             {
@@ -1594,6 +1594,43 @@ namespace ServiceReference1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TutoriaPeriodo", Namespace="http://schemas.datacontract.org/2004/07/ServiciosSistemaTutorias")]
+    public partial class TutoriaPeriodo : object
+    {
+        
+        private ServiceReference1.PeriodosEscolares periodoEscolarField;
+        
+        private ServiceReference1.TutoriasAcademicas tutoriaField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.PeriodosEscolares periodoEscolar
+        {
+            get
+            {
+                return this.periodoEscolarField;
+            }
+            set
+            {
+                this.periodoEscolarField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.TutoriasAcademicas tutoria
+        {
+            get
+            {
+                return this.tutoriaField;
+            }
+            set
+            {
+                this.tutoriaField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1
@@ -1601,6 +1638,15 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/iniciarSesion", ReplyAction="http://tempuri.org/IService1/iniciarSesionResponse")]
         System.Threading.Tasks.Task<ServiceReference1.MensajeInicioSesion> iniciarSesionAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerTutoriasAcademicas", ReplyAction="http://tempuri.org/IService1/obtenerTutoriasAcademicasResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.TutoriaPeriodo[]> obtenerTutoriasAcademicasAsync(int IDRolAcademico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerPeriodosEscolares", ReplyAction="http://tempuri.org/IService1/obtenerPeriodosEscolaresResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.PeriodosEscolares[]> obtenerPeriodosEscolaresAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarTutoriaAcademica", ReplyAction="http://tempuri.org/IService1/registrarTutoriaAcademicaResponse")]
+        System.Threading.Tasks.Task<bool> registrarTutoriaAcademicaAsync(ServiceReference1.TutoriasAcademicas tutoriaNueva);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1656,6 +1702,21 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.MensajeInicioSesion> iniciarSesionAsync(string username, string password)
         {
             return base.Channel.iniciarSesionAsync(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.TutoriaPeriodo[]> obtenerTutoriasAcademicasAsync(int IDRolAcademico)
+        {
+            return base.Channel.obtenerTutoriasAcademicasAsync(IDRolAcademico);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.PeriodosEscolares[]> obtenerPeriodosEscolaresAsync()
+        {
+            return base.Channel.obtenerPeriodosEscolaresAsync();
+        }
+        
+        public System.Threading.Tasks.Task<bool> registrarTutoriaAcademicaAsync(ServiceReference1.TutoriasAcademicas tutoriaNueva)
+        {
+            return base.Channel.registrarTutoriaAcademicaAsync(tutoriaNueva);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

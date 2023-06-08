@@ -12,8 +12,6 @@ namespace ServiciosSistemaTutorias.Modelo
         {
             DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
             MensajeInicioSesion mensajeSesion = new MensajeInicioSesion();
-            Console.WriteLine("Debug: username:" + username);
-            Console.WriteLine("Debug: password:" + password);
             var rolacAcademicoBD = (from rolAcademico in conexionBD.RolesAcademicos
                                     join academico in conexionBD.Academicos on rolAcademico.NumPersonal equals academico.NumPersonal
                                     where rolAcademico.NumPersonal == username && rolAcademico.Password == password
