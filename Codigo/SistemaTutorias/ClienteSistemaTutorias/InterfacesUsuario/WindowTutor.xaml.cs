@@ -29,7 +29,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             rolAcademico = usuario.usuarioRolAcademico;
             academico = usuario.usuarioAcademico;
             usuarioTutor = usuario;
-            lbBienvenido.Content ="Bienvenido(a): " + academico.Nombres + " " + academico.ApellidoPaterno + " " + academico.ApellidoMaterno;
+            lbBienvenido.Content = academico.Nombres + " " + academico.ApellidoPaterno + " " + academico.ApellidoMaterno;
         }
 
         private void btSesionesTutoria_Click(object sender, RoutedEventArgs e)
@@ -37,6 +37,26 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             WindowSesionesTutoria ventanaSesionesTutoria = new WindowSesionesTutoria(usuarioTutor);
             ventanaSesionesTutoria.Show();
             Close();
+        }
+
+        private void btReporteTutoria_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btProblematica_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btComentariosGenerales_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -27,6 +27,22 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             InitializeComponent();
             rolAcademico = usuario.usuarioRolAcademico;
             academico = usuario.usuarioAcademico;
+            lbBienvenido.Content = academico.Nombres + " " + academico.ApellidoPaterno + " " + academico.ApellidoMaterno;
+        }
+
+        private void btReporteTutoria_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btProblematica_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
