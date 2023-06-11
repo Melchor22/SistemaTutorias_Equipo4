@@ -79,14 +79,14 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.5.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.3.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteSistemaTutorias;V1.0.0.0;component/interfacesusuario/cus/windowllenarrepo" +
-                    "rtetutoria.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteSistemaTutorias;component/interfacesusuario/cus/windowllenarreportetutori" +
+                    "a.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\InterfacesUsuario\CUs\WindowLlenarReporteTutoria.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -96,7 +96,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.5.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.3.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]

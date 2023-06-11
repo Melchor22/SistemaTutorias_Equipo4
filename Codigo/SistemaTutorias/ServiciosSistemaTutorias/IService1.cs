@@ -24,6 +24,6 @@ namespace ServiciosSistemaTutorias
         List<PeriodosEscolares> obtenerPeriodosEscolares();
 
         [OperationContract]
-        Boolean registrarTutoriaAcademica(TutoriasAcademicas tutoriaNueva);
+        Boolean registrarTutoriaAcademica(DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria);
     }
 }

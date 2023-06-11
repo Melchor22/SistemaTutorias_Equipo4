@@ -1570,6 +1570,8 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private System.Nullable<int> _NRC;
 		
+		private string _Solucion;
+		
 		private EntityRef<CategoriasProblematica> _CategoriasProblematica;
 		
 		private EntityRef<ExperienciasEducativas> _ExperienciasEducativas;
@@ -1592,6 +1594,8 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnIDTutoriaAcademicaEstudianteChanged();
     partial void OnNRCChanging(System.Nullable<int> value);
     partial void OnNRCChanged();
+    partial void OnSolucionChanging(string value);
+    partial void OnSolucionChanged();
     #endregion
 		
 		public ProblematicasAcademicas()
@@ -1730,6 +1734,26 @@ namespace ServiciosSistemaTutorias.Modelo
 					this._NRC = value;
 					this.SendPropertyChanged("NRC");
 					this.OnNRCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Solucion", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string Solucion
+		{
+			get
+			{
+				return this._Solucion;
+			}
+			set
+			{
+				if ((this._Solucion != value))
+				{
+					this.OnSolucionChanging(value);
+					this.SendPropertyChanging();
+					this._Solucion = value;
+					this.SendPropertyChanged("Solucion");
+					this.OnSolucionChanged();
 				}
 			}
 		}
@@ -2820,6 +2844,8 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private System.Nullable<int> _IDPeriodoEscolar;
 		
+		private System.Nullable<System.DateTime> _FechaCierre;
+		
 		private EntitySet<ReportesTutoria> _ReportesTutoria;
 		
 		private EntitySet<TutoriasAcademicasEstudiantes> _TutoriasAcademicasEstudiantes;
@@ -2848,6 +2874,8 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnIDReporteTutoriaChanged();
     partial void OnIDPeriodoEscolarChanging(System.Nullable<int> value);
     partial void OnIDPeriodoEscolarChanged();
+    partial void OnFechaCierreChanging(System.Nullable<System.DateTime> value);
+    partial void OnFechaCierreChanged();
     #endregion
 		
 		public TutoriasAcademicas()
@@ -3008,6 +3036,26 @@ namespace ServiciosSistemaTutorias.Modelo
 					this._IDPeriodoEscolar = value;
 					this.SendPropertyChanged("IDPeriodoEscolar");
 					this.OnIDPeriodoEscolarChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaCierre", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FechaCierre
+		{
+			get
+			{
+				return this._FechaCierre;
+			}
+			set
+			{
+				if ((this._FechaCierre != value))
+				{
+					this.OnFechaCierreChanging(value);
+					this.SendPropertyChanging();
+					this._FechaCierre = value;
+					this.SendPropertyChanged("FechaCierre");
+					this.OnFechaCierreChanged();
 				}
 			}
 		}

@@ -103,6 +103,8 @@ CREATE TABLE TutoriasAcademicas (
 	FOREIGN KEY (IDPeriodoEscolar) REFERENCES PeriodosEscolares(IDPeriodoEscolar)
 );
 
+ALTER TABLE TutoriasAcademicas ADD FechaCierre DATETIME;
+
 ALTER TABLE ReportesTutoria
 ADD CONSTRAINT FK_ReportesTutoria_TutoriasAcademicas FOREIGN KEY (IDTutoriaAcademica)
 REFERENCES TutoriasAcademicas (IDTutoriaAcademica);
@@ -126,3 +128,5 @@ CREATE TABLE ProblematicasAcademicas (
 	FOREIGN KEY (IDTutoriaAcademicaEstudiante) REFERENCES TutoriasAcademicasEstudiantes(IDTutoriaAcademicaEstudiante),
 	FOREIGN KEY (NRC) REFERENCES ExperienciasEducativas(NRC)
 );
+
+ALTER TABLE ProblematicasAcademicas ADD Solucion NTEXT;

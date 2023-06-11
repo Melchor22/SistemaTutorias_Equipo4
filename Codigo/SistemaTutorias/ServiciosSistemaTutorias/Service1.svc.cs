@@ -29,9 +29,9 @@ namespace ServiciosSistemaTutorias
             return tutoriasObtenidas;
         }
 
-        public bool registrarTutoriaAcademica(TutoriasAcademicas tutoriaNueva)
+        public bool registrarTutoriaAcademica(DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria)
         {
-            return TutoriasAcademicasDAO.registrarTutoriaAcademica(tutoriaNueva);
+            return TutoriasAcademicasDAO.registrarTutoriaAcademica(FechaTutoria, NumSesionTutoria, IDPeriodoEscolarTutoria, IDRolAcademicoTutoria);
         }
     }
 }

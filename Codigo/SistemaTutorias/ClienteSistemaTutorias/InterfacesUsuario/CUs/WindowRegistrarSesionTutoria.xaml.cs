@@ -97,17 +97,9 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private async void RegistrarSesionTutoria (DateTime fecha, int numSesion, PeriodosEscolares periodoIngresado)
         {
-            TutoriasAcademicas nuevaTutoria = new TutoriasAcademicas()
-            {
-                Fecha = fecha,
-                NumSesion = numSesion,
-                IDPeriodoEscolar = periodoIngresado.IDPeriodoEscolar,
-                IDRolAcademico = rolAcademico.IDRolAcademico
-            };
-
             using (var conexionServicios = new Service1Client())
             {
-                Task<bool> resultadoOperacion = conexionServicios.registrarTutoriaAcademicaAsync(nuevaTutoria);
+                Task<bool> resultadoOperacion = conexionServicios.registrarTutoriaAcademicaAsync(fecha, numSesion, periodoIngresado.IDPeriodoEscolar, rolAcademico.IDRolAcademico);
                 bool registroExitoso = await resultadoOperacion;
                 if (registroExitoso)
                 {

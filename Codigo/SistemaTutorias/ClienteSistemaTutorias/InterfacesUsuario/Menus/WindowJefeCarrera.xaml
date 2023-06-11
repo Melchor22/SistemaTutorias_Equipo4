@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario"
         mc:Ignorable="d"
-        Title="Sistema Tutorías: Jefe de Carrera" Height="450" Width="800" Icon="..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
+        Title="Sistema Tutorías: Jefe de Carrera" Height="450" Width="800" Icon="..\..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow">
     <Grid>

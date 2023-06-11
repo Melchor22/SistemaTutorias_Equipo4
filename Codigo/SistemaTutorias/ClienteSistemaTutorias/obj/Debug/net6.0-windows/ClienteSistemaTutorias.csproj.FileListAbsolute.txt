@@ -62,18 +62,8 @@ C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\Sistema
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Federation.resources.dll
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowInicioSesion.g.cs
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowJefeCarrera.g.cs
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowInicioSesion.baml
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowJefeCarrera.baml
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\ClienteSistemaTutorias.csproj.CopyComplete
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowCoordinador.g.cs
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowTutor.g.cs
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowCoordinador.baml
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowTutor.baml
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowSesionesTutoria.g.cs
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowSesionesTutoria.baml
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowRegistrarSesionTutoria.g.cs
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\WindowRegistrarSesionTutoria.baml
 C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\ClienteSistemaTutorias.csproj.AssemblyReference.cache
 C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowProblematicaAcademica.g.cs
 C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarEstudiante.g.cs
@@ -91,3 +81,29 @@ C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutori
 C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\ClienteSistemaTutorias.dll
 C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\refint\ClienteSistemaTutorias.dll
 C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\ClienteSistemaTutorias.pdb
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowAsignarTutor.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowLlenarReporteTutoria.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowProblematicaAcademica.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarComentariosGenerales.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarEstudiante.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowReporteTutoria.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowSesionesTutoria.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowCoordinador.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowJefeCarrera.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowTutor.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowAsignarTutor.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowLlenarReporteTutoria.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowProblematicaAcademica.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarComentariosGenerales.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarEstudiante.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowReporteTutoria.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowSesionesTutoria.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowCoordinador.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowJefeCarrera.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowTutor.baml

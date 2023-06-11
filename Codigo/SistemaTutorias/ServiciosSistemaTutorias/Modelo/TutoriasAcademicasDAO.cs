@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 
@@ -8,20 +9,18 @@ namespace ServiciosSistemaTutorias.Modelo
 {
     public class TutoriasAcademicasDAO
     {
-        public static Boolean registrarTutoriaAcademica(TutoriasAcademicas tutoriaNueva)
+        public static Boolean registrarTutoriaAcademica(DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria)
         {
             try
             {
                 DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
 
-                PeriodosEscolares periodoTutoria = conexionBD.PeriodosEscolares.First(em => em.IDPeriodoEscolar.Equals(tutoriaNueva.IDPeriodoEscolar));
-                RolesAcademicos rolAcademicoTutoria = conexionBD.RolesAcademicos.First(em => em.IDRolAcademico.Equals(tutoriaNueva.IDRolAcademico));
                 var tutoria = new TutoriasAcademicas()
                 {
-                    Fecha = tutoriaNueva.Fecha,
-                    NumSesion = tutoriaNueva.NumSesion,
-                    IDPeriodoEscolar = tutoriaNueva.IDPeriodoEscolar,
-                    IDRolAcademico = rolAcademicoTutoria.IDRolAcademico
+                    Fecha = FechaTutoria,
+                    NumSesion = NumSesionTutoria,
+                    IDPeriodoEscolar = IDPeriodoEscolarTutoria,
+                    IDRolAcademico = IDRolAcademicoTutoria
                 };
                 Debug.WriteLine("Despues de crear tutoria");
                 Debug.WriteLine(tutoria.Fecha.ToString());

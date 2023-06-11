@@ -549,6 +549,8 @@ namespace ServiceReference1
         
         private System.Nullable<int> NRCField;
         
+        private string SolucionField;
+        
         private ServiceReference1.TutoriasAcademicasEstudiantes TutoriasAcademicasEstudiantesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
@@ -652,6 +654,19 @@ namespace ServiceReference1
             set
             {
                 this.NRCField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Solucion
+        {
+            get
+            {
+                return this.SolucionField;
+            }
+            set
+            {
+                this.SolucionField = value;
             }
         }
         
@@ -1067,6 +1082,8 @@ namespace ServiceReference1
         
         private System.Nullable<System.DateTime> FechaField;
         
+        private System.Nullable<System.DateTime> FechaCierreField;
+        
         private System.Nullable<int> IDPeriodoEscolarField;
         
         private System.Nullable<int> IDReporteTutoriaField;
@@ -1110,6 +1127,19 @@ namespace ServiceReference1
             set
             {
                 this.FechaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> FechaCierre
+        {
+            get
+            {
+                return this.FechaCierreField;
+            }
+            set
+            {
+                this.FechaCierreField = value;
             }
         }
         
@@ -1646,7 +1676,7 @@ namespace ServiceReference1
         System.Threading.Tasks.Task<ServiceReference1.PeriodosEscolares[]> obtenerPeriodosEscolaresAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarTutoriaAcademica", ReplyAction="http://tempuri.org/IService1/registrarTutoriaAcademicaResponse")]
-        System.Threading.Tasks.Task<bool> registrarTutoriaAcademicaAsync(ServiceReference1.TutoriasAcademicas tutoriaNueva);
+        System.Threading.Tasks.Task<bool> registrarTutoriaAcademicaAsync(System.DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1714,9 +1744,9 @@ namespace ServiceReference1
             return base.Channel.obtenerPeriodosEscolaresAsync();
         }
         
-        public System.Threading.Tasks.Task<bool> registrarTutoriaAcademicaAsync(ServiceReference1.TutoriasAcademicas tutoriaNueva)
+        public System.Threading.Tasks.Task<bool> registrarTutoriaAcademicaAsync(System.DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria)
         {
-            return base.Channel.registrarTutoriaAcademicaAsync(tutoriaNueva);
+            return base.Channel.registrarTutoriaAcademicaAsync(FechaTutoria, NumSesionTutoria, IDPeriodoEscolarTutoria, IDRolAcademicoTutoria);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
