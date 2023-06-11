@@ -1,0 +1,15 @@
+﻿<Window x:Class="ClienteSistemaTutorias.InterfacesUsuario.CUs.WindowRegistrarComentariosGenerales"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario.CUs"
+        mc:Ignorable="d"
+        Title="Registrar Comentarios Generales" Height="450" Width="800">
+    <Grid>
+        <Label Content="Comentario:" HorizontalAlignment="Center" Margin="0,33,0,0" VerticalAlignment="Top" FontSize="22" Width="144" FontWeight="Bold"/>
+        <TextBox  x:Name="tbComentarioGeneral" HorizontalAlignment="Left" Margin="76,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="658" Height="147"/>
+        <Button x:Name="btGuardarComentarios" Content="Guardar" HorizontalAlignment="Center" Margin="0,302,0,0" VerticalAlignment="Top" FontSize="16" Width="74" Height="33" Click="btGuardarComentarioGeneral_Click"/>
+
+    </Grid>
+</Window>

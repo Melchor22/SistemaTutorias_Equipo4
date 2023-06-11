@@ -7,39 +7,87 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="InterfacesUsuario\WindowCoordinador.xaml.cs">
+    <Compile Update="InterfacesUsuario\CUs\WindowAsignarTutor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="InterfacesUsuario\WindowJefeCarrera.xaml.cs">
+    <Compile Update="InterfacesUsuario\CUs\WindowLlenarReporteTutoria.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="InterfacesUsuario\WindowRegistrarSesionTutoria.xaml.cs">
+    <Compile Update="InterfacesUsuario\CUs\WindowProblematicaAcademica.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="InterfacesUsuario\WindowSesionesTutoria.xaml.cs">
+    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarComentariosGenerales.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="InterfacesUsuario\WindowTutor.xaml.cs">
+    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarEstudiante.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\Menus\WindowCoordinador.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\Menus\WindowJefeCarrera.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\CUs\WindowSesionesTutoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\Menus\WindowTutor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InterfacesUsuario\CUs\WindowReporteTutoria.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="InterfacesUsuario\WindowCoordinador.xaml">
+    <Page Update="InterfacesUsuario\CUs\WindowAsignarTutor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowLlenarReporteTutoria.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowProblematicaAcademica.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowRegistrarComentariosGenerales.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowRegistrarEstudiante.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\Menus\WindowCoordinador.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\WindowInicioSesion.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="InterfacesUsuario\WindowJefeCarrera.xaml">
+    <Page Update="InterfacesUsuario\Menus\WindowJefeCarrera.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="InterfacesUsuario\WindowRegistrarSesionTutoria.xaml">
+    <Page Update="InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="InterfacesUsuario\WindowSesionesTutoria.xaml">
+    <Page Update="InterfacesUsuario\CUs\WindowSesionesTutoria.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="InterfacesUsuario\WindowTutor.xaml">
+    <Page Update="InterfacesUsuario\Menus\WindowTutor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowReporteTutoria.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

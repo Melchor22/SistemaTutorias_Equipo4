@@ -34,10 +34,15 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             dgTutoriasAcademicas.ItemsSource = vmTutoriaAcademica.tutoriaViewModel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btRegistrarSesion_Click(object sender, RoutedEventArgs e)
         {
             WindowRegistrarSesionTutoria ventanaRegistrarSesionTutoria = new WindowRegistrarSesionTutoria(usuarioSesion);
             ventanaRegistrarSesionTutoria.Show();
+        }
+
+        private void btModificarSesion_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

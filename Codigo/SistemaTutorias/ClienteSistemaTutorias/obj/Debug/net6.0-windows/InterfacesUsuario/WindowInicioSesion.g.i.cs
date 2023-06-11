@@ -77,8 +77,7 @@ namespace ClienteSistemaTutorias {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClienteSistemaTutorias;V1.0.0.0;component/interfacesusuario/windowiniciosesion.x" +
-                    "aml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClienteSistemaTutorias;component/interfacesusuario/windowiniciosesion.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\InterfacesUsuario\WindowInicioSesion.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

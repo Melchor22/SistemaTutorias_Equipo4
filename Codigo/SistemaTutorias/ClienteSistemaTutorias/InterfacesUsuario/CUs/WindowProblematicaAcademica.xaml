@@ -1,0 +1,21 @@
+﻿<Window x:Class="ClienteSistemaTutorias.InterfacesUsuario.CUs.WindowProblematicaAcademica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario.CUs"
+        mc:Ignorable="d"
+        Title="WindowProblematicaAcademica" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgProblematicasAcademicas" AutoGenerateColumns="False" Margin="0,84,0,50" CanUserAddRows="False" FontSize="20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Categoría" Binding="{Binding categoria}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Materia" Binding="{Binding nrc}" Width="*" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btRegistrarProblematica" Content="Nueva" HorizontalAlignment="Left" Margin="710,25,0,0" VerticalAlignment="Top" FontSize="20" Width="80" Height="40" Click="btRegistrarProblematica_Click"/>
+        <Button x:Name="btAgregarSolucion" Content="Cambiar a Solucionado" HorizontalAlignment="Left" Margin="466,25,0,0" VerticalAlignment="Top" FontSize="20" Width="220" Height="40" Click="btAgregarSolucion_Click"/>
+
+    </Grid>
+</Window>

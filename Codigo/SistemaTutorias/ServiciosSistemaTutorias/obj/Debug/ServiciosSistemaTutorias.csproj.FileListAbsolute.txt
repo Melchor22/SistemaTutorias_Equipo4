@@ -5,3 +5,10 @@ C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\Sistema
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\bin\ServiciosSistemaTutorias.pdb
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\obj\Debug\ServiciosSistemaTutorias.dll
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\obj\Debug\ServiciosSistemaTutorias.pdb
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\bin\ServiciosSistemaTutorias.dll.config
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\bin\ServiciosSistemaTutorias.dll
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\bin\ServiciosSistemaTutorias.pdb
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\obj\Debug\ServiciosSistemaTutorias.csproj.AssemblyReference.cache
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\obj\Debug\ServiciosSistemaTutorias.csproj.CoreCompileInputs.cache
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\obj\Debug\ServiciosSistemaTutorias.dll
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ServiciosSistemaTutorias\obj\Debug\ServiciosSistemaTutorias.pdb

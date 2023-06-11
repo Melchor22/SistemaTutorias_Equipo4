@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\
 ClienteSistemaTutorias
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\App.xaml
-61347670380
+C:\Users\USER\OneDrive - Universidad Veracruzana\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\App.xaml
+10169043456
 
-11-1379918855
-208-1075383708
-InterfacesUsuario\WindowCoordinador.xaml;InterfacesUsuario\WindowInicioSesion.xaml;InterfacesUsuario\WindowJefeCarrera.xaml;InterfacesUsuario\WindowRegistrarSesionTutoria.xaml;InterfacesUsuario\WindowSesionesTutoria.xaml;InterfacesUsuario\WindowTutor.xaml;
+15-646452649
+208866850295
+InterfacesUsuario\CUs\WindowProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarEstudiante.xaml;InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.xaml;InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml;InterfacesUsuario\CUs\WindowSesionesTutoria.xaml;InterfacesUsuario\Menus\WindowCoordinador.xaml;InterfacesUsuario\Menus\WindowJefeCarrera.xaml;InterfacesUsuario\Menus\WindowTutor.xaml;InterfacesUsuario\WindowInicioSesion.xaml;
 
-False
+True
 
