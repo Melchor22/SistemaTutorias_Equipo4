@@ -25,5 +25,8 @@ namespace ServiciosSistemaTutorias
 
         [OperationContract]
         Boolean registrarTutoriaAcademica(DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria);
+
+        [OperationContract]
+        bool registrarReporteTutoria(string descripcion, string comentariosGenerales, int IDTutoriaAcademica);
     }
 }

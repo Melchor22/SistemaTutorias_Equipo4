@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\App.xaml
-141507517225
+12-341479736
 
-19-2121709062
+172077879991
 208-1075383708
-InterfacesUsuario\CUs\WindowAsignarTutor.xaml;InterfacesUsuario\CUs\WindowLlenarReporteTutoria.xaml;InterfacesUsuario\CUs\WindowProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarComentariosGenerales.xaml;InterfacesUsuario\CUs\WindowRegistrarEstudiante.xaml;InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.xaml;InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml;InterfacesUsuario\CUs\WindowReporteTutoria.xaml;InterfacesUsuario\CUs\WindowSesionesTutoria.xaml;InterfacesUsuario\Menus\WindowCoordinador.xaml;InterfacesUsuario\Menus\WindowJefeCarrera.xaml;InterfacesUsuario\Menus\WindowTutor.xaml;InterfacesUsuario\WindowInicioSesion.xaml;
+InterfacesUsuario\CUs\WindowAsignarTutor.xaml;InterfacesUsuario\CUs\WindowProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarEstudiante.xaml;InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.xaml;InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml;InterfacesUsuario\CUs\WindowReporteTutoria.xaml;InterfacesUsuario\CUs\WindowSesionesTutoria.xaml;InterfacesUsuario\Menus\WindowCoordinador.xaml;InterfacesUsuario\Menus\WindowJefeCarrera.xaml;InterfacesUsuario\Menus\WindowTutor.xaml;InterfacesUsuario\WindowInicioSesion.xaml;
 
 False
 

@@ -67,13 +67,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MensajeInicioSesion.cs" />
-    <Compile Include="Modelo\ConexionBD.cs" />
     <Compile Include="Modelo\DataClassesSistemaTutorias.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesSistemaTutorias.dbml</DependentUpon>
     </Compile>
     <Compile Include="Modelo\PeriodosEscolaresDAO.cs" />
+    <Compile Include="Modelo\ReportesTutoriaDAO.cs" />
     <Compile Include="Modelo\RolesAcademicosDAO.cs" />
     <Compile Include="Modelo\TutoriasAcademicasDAO.cs" />
     <Compile Include="Service1.svc.cs">

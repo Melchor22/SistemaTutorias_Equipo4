@@ -32,7 +32,8 @@ namespace ClienteSistemaTutorias.Modelo
                     {
                         fecha = (DateTime)tutoria.tutoria.Fecha,
                         numSesion = (int)tutoria.tutoria.NumSesion,
-                        periodoEscolar = fechaInicio.ToString("MMM yyyy") + " - " + fechaFin.ToString("MMM yyyy")
+                        periodoEscolar = fechaInicio.ToString("MMM yyyy") + " - " + fechaFin.ToString("MMM yyyy"),
+                        idTutoria = tutoria.tutoria.IDTutoriaAcademica
                     };
                     tutoriaViewModel.Add(datosTutoria);
                 }

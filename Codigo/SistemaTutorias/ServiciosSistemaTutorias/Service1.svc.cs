@@ -33,5 +33,10 @@ namespace ServiciosSistemaTutorias
         {
             return TutoriasAcademicasDAO.registrarTutoriaAcademica(FechaTutoria, NumSesionTutoria, IDPeriodoEscolarTutoria, IDRolAcademicoTutoria);
         }
+
+        public bool registrarReporteTutoria(string descripcion, string comentariosGenerales, int IDTutoriaAcademica)
+        {
+            return ReportesTutoriaDAO.registrarReporteTutoria(descripcion, comentariosGenerales, IDTutoriaAcademica);
+        }
     }
 }

@@ -5,16 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario"
         mc:Ignorable="d"
-        Title="Reporte Tutoria" Height="450" Width="800">
+        Title="Reportes Tutoria" Height="450" Width="800"
+        Icon="..\..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow" FontSize="20">
     <Grid>
-        <DataGrid x:Name="dgTutoriasAcademicas" AutoGenerateColumns="False" Margin="0,84,0,50" CanUserAddRows="False" FontSize="20">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Num Sesion" Binding="{Binding numSesion}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Periodo Escolar" Binding="{Binding periodoEscolar}" Width="*" IsReadOnly="True"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="btLlenarReporte" Content="Llenar nuevo Reporte" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontSize="20" Width="218" Height="40" Click="btNuevoReporteTutoria_Click"/>
-        <Button x:Name="btRegistrarComentarios" Content="Dar Comentarios Generales" HorizontalAlignment="Left" Margin="536,25,0,0" VerticalAlignment="Top" FontSize="20" Width="254" Height="40" Click="btRegistrarComentarios_Click"/>
-
+        <Label Content="Descripción:" HorizontalAlignment="Left" Margin="27,7,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbDescripcion" HorizontalAlignment="Center" Margin="0,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="746" Height="77" FontSize="16"/>
+        <Label Content="Comentarios Generales:" HorizontalAlignment="Left" Margin="27,157,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbComentarioGeneral" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="746" Height="143" FontSize="16"/>
+        <Button x:Name="btGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="683,362,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="btGuardar_Click" FontSize="16"/>
     </Grid>
 </Window>

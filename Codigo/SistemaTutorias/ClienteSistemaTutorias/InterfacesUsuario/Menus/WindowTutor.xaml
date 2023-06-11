@@ -10,12 +10,10 @@
         WindowStyle="SingleBorderWindow">
     <Grid>
         <Label x:Name="lbBienvenido" Content="." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" FontSize="20"/>
-        <Button x:Name="btSesionesTutoria" Content="Sesiones de Tutoría" HorizontalAlignment="Left" Margin="192,237,0,0" VerticalAlignment="Top" FontSize="16" Width="200" Height="55" Click="btSesionesTutoria_Click"/>
+        <Button x:Name="btSesionesTutoria" Content="Sesiones de Tutoría" HorizontalAlignment="Left" Margin="160,128,0,0" VerticalAlignment="Top" FontSize="16" Width="200" Height="55" Click="btSesionesTutoria_Click"/>
+        <Button x:Name="btReportesTutoria" Content="Reportes de Tutoría" HorizontalAlignment="Left" Margin="443,128,0,0" VerticalAlignment="Top" FontSize="16" Width="200" Height="55" Click="btReportesTutoria_Click"/>
         <Label Content="Bienvenido(a)" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="246"/>
-        <Button x:Name="btReporteTutoria" Content="Reporte Tutoria" HorizontalAlignment="Left" Margin="189,145,0,0" VerticalAlignment="Top" Height="56" Width="206" Click="btReporteTutoria_Click" FontSize="16"/>
-        <Button x:Name="btProblematica" Content="Problemática Académica" HorizontalAlignment="Left" Margin="421,145,0,0" VerticalAlignment="Top" Height="56" Width="206" Click="btProblematica_Click" FontSize="16"/>
-        <Button x:Name="btComentariosGenerales" Content="Comentarios Generales" HorizontalAlignment="Left" Margin="421,237,0,0" VerticalAlignment="Top" Height="56" Width="206" Click="btComentariosGenerales_Click" FontSize="16"/>
-        <Button x:Name="btCerrarSesion" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="673,390,0,0" VerticalAlignment="Top" Height="34" Width="117" Click="btCerrarSesion_Click" FontSize="16"/>
+        <Button x:Name="btCerrarSesion" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="650,365,0,0" VerticalAlignment="Top" Height="34" Width="117" Click="btCerrarSesion_Click" FontSize="16"/>
 
     </Grid>
 </Window>

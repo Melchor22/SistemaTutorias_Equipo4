@@ -44,5 +44,23 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         {
 
         }
+
+        private void btRegistrarReporte_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgTutoriasAcademicas.SelectedItem != null)
+            {
+                DatosTutoria FilaSeleccionada = (DatosTutoria)dgTutoriasAcademicas.SelectedItem;
+
+                int IDTutoria = FilaSeleccionada.idTutoria;
+                int IDRolAcademico = rolAcademico.IDRolAcademico;
+
+                WindowReporteTutoria ventanaReporteTutoria = new WindowReporteTutoria(IDRolAcademico, IDTutoria);
+                ventanaReporteTutoria.Show();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una tutoría académica para continuar.");
+            }
+        }
     }
 }

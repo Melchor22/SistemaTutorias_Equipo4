@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,19 +20,35 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
     /// </summary>
     public partial class WindowReporteTutoria : Window
     {
-        public WindowReporteTutoria()
+        int IDRolAcademico;
+        int IDTutoriaAcademica;
+        public WindowReporteTutoria(int iDRolAcademico, int iDTutoriaAcademica)
         {
             InitializeComponent();
+            IDRolAcademico = iDRolAcademico;
+            IDTutoriaAcademica = iDTutoriaAcademica;
         }
 
-        private void btNuevoReporteTutoria_Click(object sender, RoutedEventArgs e)
+        private async void btGuardar_Click(object sender, RoutedEventArgs e)
         {
+            string Descripcion = tbComentarioGeneral.Text;
+            string ComentariosGenerales = tbComentarioGeneral.Text;
 
-        }
+            using (var conexionServicios = new Service1Client())
+            {
+                Task<bool> resultadoOperacion = conexionServicios.registrarReporteTutoriaAsync(Descripcion, ComentariosGenerales, IDTutoriaAcademica);
+                bool registroExitoso = await resultadoOperacion;
+                if (registroExitoso)
+                {
+                    MessageBox.Show("Reporte Regsitrado Exitosamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error en el registro.");
+                }
+            }
 
-        private void btRegistrarComentarios_Click(object sender, RoutedEventArgs e)
-        {
-
+                Close();
         }
     }
 }

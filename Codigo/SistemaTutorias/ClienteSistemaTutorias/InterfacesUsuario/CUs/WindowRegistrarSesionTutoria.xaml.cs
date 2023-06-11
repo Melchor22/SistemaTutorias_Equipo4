@@ -49,7 +49,6 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
                 DateTime fecha = DateTime.ParseExact(fechaObtenida, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 DateTime hora = DateTime.ParseExact(horaObtenida, "HH:mm", CultureInfo.InvariantCulture);
                 DateTime fechaHora = new DateTime(fecha.Year, fecha.Month, fecha.Day, hora.Hour, hora.Minute, hora.Second);
-                MessageBox.Show(fechaHora.ToString());
 
 
                 int numSesionRegistro = int.Parse(cbNumSesion.SelectedItem.ToString());

@@ -36,25 +36,16 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         {
             WindowSesionesTutoria ventanaSesionesTutoria = new WindowSesionesTutoria(usuarioTutor);
             ventanaSesionesTutoria.Show();
-            Close();
-        }
-
-        private void btReporteTutoria_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btProblematica_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btComentariosGenerales_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            WindowInicioSesion ventanaInicioSesion = new WindowInicioSesion();
+            ventanaInicioSesion.Show();
+            Close();
+        }
+
+        private void btReportesTutoria_Click(object sender, RoutedEventArgs e)
         {
 
         }

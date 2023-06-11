@@ -22,15 +22,8 @@ namespace ServiciosSistemaTutorias.Modelo
                     IDPeriodoEscolar = IDPeriodoEscolarTutoria,
                     IDRolAcademico = IDRolAcademicoTutoria
                 };
-                Debug.WriteLine("Despues de crear tutoria");
-                Debug.WriteLine(tutoria.Fecha.ToString());
-                Debug.WriteLine(tutoria.NumSesion);
-                Debug.WriteLine(tutoria.IDPeriodoEscolar);
-                Debug.WriteLine(tutoria.IDRolAcademico);
                 conexionBD.TutoriasAcademicas.InsertOnSubmit(tutoria);
-                Debug.WriteLine("Despues de insertonsubmit");
                 conexionBD.SubmitChanges();
-                Debug.WriteLine("Despues de submit on changes");
 
                 return true;
             }catch (Exception ex)

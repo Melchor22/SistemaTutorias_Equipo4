@@ -18,5 +18,8 @@ namespace ClienteSistemaTutorias.Modelo
 
         [DataMember]
         public string periodoEscolar { get; set; }
+
+        [DataMember]
+        public int idTutoria { get; set; }
     }
 }
