@@ -28,5 +28,11 @@ namespace ServiciosSistemaTutorias
 
         [OperationContract]
         bool registrarReporteTutoria(string descripcion, string comentariosGenerales, int IDTutoriaAcademica);
+
+        [OperationContract]
+        TutoriaPeriodo consultarTutoriaAcademica(int IDTutoria);
+
+        [OperationContract]
+        bool modificarTutoriaAcademica(int IDTutoria, DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria);
     }
 }

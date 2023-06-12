@@ -103,3 +103,5 @@ C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\Sistema
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowCoordinador.baml
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowJefeCarrera.baml
 C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\Menus\WindowTutor.baml
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowModificarSesionTutoria.g.cs
+C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\InterfacesUsuario\CUs\WindowModificarSesionTutoria.baml

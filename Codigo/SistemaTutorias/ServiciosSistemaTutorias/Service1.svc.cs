@@ -38,5 +38,15 @@ namespace ServiciosSistemaTutorias
         {
             return ReportesTutoriaDAO.registrarReporteTutoria(descripcion, comentariosGenerales, IDTutoriaAcademica);
         }
+
+        public TutoriaPeriodo consultarTutoriaAcademica(int IDTutoria)
+        {
+            return TutoriasAcademicasDAO.consultarTutoriaAcademica(IDTutoria);
+        }
+
+        public bool modificarTutoriaAcademica(int IDTutoria, DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria)
+        {
+            return TutoriasAcademicasDAO.modificarTutoriaAcademica(IDTutoria, FechaTutoria, NumSesionTutoria, IDPeriodoEscolarTutoria, IDRolAcademicoTutoria);
+        }
     }
 }

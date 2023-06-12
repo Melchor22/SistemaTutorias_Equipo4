@@ -70,6 +70,69 @@ namespace ServiciosSistemaTutorias.Modelo
             return tutoriasBD.ToArray();
         }
 
+        public static TutoriaPeriodo consultarTutoriaAcademica(int IDTutoria)
+        {
+            DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+            var tutoriasAcademicasBD = (from tutoriaBD in conexionBD.TutoriasAcademicas
+                                       join periodoBD in conexionBD.PeriodosEscolares on tutoriaBD.IDPeriodoEscolar equals periodoBD.IDPeriodoEscolar
+                                       where tutoriaBD.IDTutoriaAcademica == IDTutoria
+                                       select new { tutoriaBD, periodoBD }).FirstOrDefault();
+
+            TutoriaPeriodo tutoriaPeriodo = new TutoriaPeriodo
+            {
+                tutoria = new TutoriasAcademicas
+                {
+                    IDTutoriaAcademica = tutoriasAcademicasBD.tutoriaBD.IDTutoriaAcademica,
+                    Duracion = tutoriasAcademicasBD.tutoriaBD.Duracion,
+                    Fecha = tutoriasAcademicasBD.tutoriaBD.Fecha,
+                    NumSesion = tutoriasAcademicasBD.tutoriaBD.NumSesion,
+                    IDRolAcademico = tutoriasAcademicasBD.tutoriaBD.IDRolAcademico,
+                    IDReporteTutoria = tutoriasAcademicasBD.tutoriaBD.IDReporteTutoria,
+                    IDPeriodoEscolar = tutoriasAcademicasBD.tutoriaBD.IDPeriodoEscolar
+                },
+                periodoEscolar = new PeriodosEscolares
+                {
+                    IDPeriodoEscolar = tutoriasAcademicasBD.periodoBD.IDPeriodoEscolar,
+                    FechaInicio = tutoriasAcademicasBD.periodoBD.FechaInicio,
+                    FechaFin = tutoriasAcademicasBD.periodoBD.FechaFin
+                }
+            };
+
+            return tutoriaPeriodo;
+        }
+
+        public static bool modificarTutoriaAcademica(int IDTutoria, DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria)
+        {
+            try
+            {
+                DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
+                var tutoriaModificar = (from tutoriaBD in conexionBD.TutoriasAcademicas
+                                       where tutoriaBD.IDTutoriaAcademica == IDTutoria
+                                       select tutoriaBD).FirstOrDefault();
+
+                if (tutoriaModificar != null)
+                {
+                    tutoriaModificar.Fecha = FechaTutoria;
+                    tutoriaModificar.NumSesion = NumSesionTutoria;
+                    tutoriaModificar.IDPeriodoEscolar = IDPeriodoEscolarTutoria;
+                    tutoriaModificar.IDRolAcademico = IDRolAcademicoTutoria;
+
+                    conexionBD.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public static DataClassesSistemaTutoriasDataContext getConnection()
         {
             return new DataClassesSistemaTutoriasDataContext(global::System.Configuration.ConfigurationManager.ConnectionStrings["SistemaTutoriasConnectionString"].ConnectionString);

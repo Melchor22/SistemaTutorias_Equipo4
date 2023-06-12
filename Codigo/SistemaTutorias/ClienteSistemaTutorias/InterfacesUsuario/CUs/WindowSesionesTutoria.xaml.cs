@@ -40,9 +40,25 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             ventanaRegistrarSesionTutoria.Show();
         }
 
-        private void btModificarSesion_Click(object sender, RoutedEventArgs e)
+        private async void btModificarSesion_Click(object sender, RoutedEventArgs e)
         {
+            if (dgTutoriasAcademicas.SelectedItem != null)
+            {
+                DatosTutoria FilaSeleccionada = (DatosTutoria)dgTutoriasAcademicas.SelectedItem;
 
+                int IDTutoria = FilaSeleccionada.idTutoria;
+
+                using (var conexionServicios = new Service1Client())
+                {
+                    TutoriaPeriodo tutoriaObtenida = await conexionServicios.consultarTutoriaAcademicaAsync(IDTutoria);
+                    WindowModificarSesionTutoria ventanaModificarSesionTutoria = new WindowModificarSesionTutoria(tutoriaObtenida, usuarioSesion);
+                    ventanaModificarSesionTutoria.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una tutoría académica para continuar.");
+            }
         }
 
         private void btRegistrarReporte_Click(object sender, RoutedEventArgs e)

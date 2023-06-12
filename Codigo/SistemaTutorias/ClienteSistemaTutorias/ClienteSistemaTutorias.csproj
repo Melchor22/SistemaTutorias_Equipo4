@@ -23,4 +23,10 @@
     <Resource Include="Resources\1200px-Logo_de_la_Universidad_Veracruzana.svg.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="InterfacesUsuario\CUs\WindowModificarSesionTutoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
