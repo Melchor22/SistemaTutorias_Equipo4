@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Web;
@@ -46,6 +47,32 @@ namespace ServiciosSistemaTutorias.Modelo
                 mensajeSesion.mensaje = "Usuario NO encontrado. Verifica tus credenciales.";
             }
             return mensajeSesion;
+        }
+
+        public static Boolean registrarRolAcademico(string numPersonal, string password, int idRol)
+        {
+            try
+            {
+
+                DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
+                var rolAcademicoNuevo = new RolesAcademicos()
+                {
+                    NumPersonal = numPersonal,
+                    Password = password,
+                    IDRol = idRol
+                };
+
+                conexionBD.RolesAcademicos.InsertOnSubmit(rolAcademicoNuevo);
+                conexionBD.SubmitChanges();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return false;
+            }
         }
 
         public static DataClassesSistemaTutoriasDataContext getConnection()

@@ -57,5 +57,15 @@ namespace ServiciosSistemaTutorias
         {
             return ProgramaEducativosDAO.obtenerProgramaEducativos();
         }
+
+        public Boolean registrarRolAcademico(string numPersonal, string password, int idRol)
+        {
+            return RolesAcademicosDAO.registrarRolAcademico(numPersonal, password, idRol);
+        }
+
+        public List<Academicos> obtenerAcademicos()
+        {
+            return AcademicoDAO.obtenerAcademicos();
+        }
     }
 }

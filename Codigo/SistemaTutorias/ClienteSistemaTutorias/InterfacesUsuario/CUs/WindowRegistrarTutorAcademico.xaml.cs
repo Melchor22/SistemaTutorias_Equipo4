@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClienteSistemaTutorias.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,21 +13,46 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
+namespace ClienteSistemaTutorias.InterfacesUsuario
 {
     /// <summary>
     /// Lógica de interacción para RegistrarTutorAcademico.xaml
     /// </summary>
-    public partial class RegistrarTutorAcademico : Window
+    public partial class WindowRegistrarTutorAcademico : Window
     {
-        public RegistrarTutorAcademico()
+        public WindowRegistrarTutorAcademico()
         {
             InitializeComponent();
+            AcademicoViewModel vmAcademico = new AcademicoViewModel();
+            dgAcademicos.ItemsSource = vmAcademico.academicoViewModel;
         }
 
         private void btGuardarTutor_Click(object sender, RoutedEventArgs e)
         {
+            string password = tbPassword.Text;
+            bool validacion = VerificarCampos(password);
 
+            if (validacion)
+            {
+
+            }else
+            {
+                MessageBox.Show("Favor de proporcionar una contraseña.");
+            }
+
+        }
+
+        private bool VerificarCampos(string password)
+        {
+
+            if (string.IsNullOrEmpty(password))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

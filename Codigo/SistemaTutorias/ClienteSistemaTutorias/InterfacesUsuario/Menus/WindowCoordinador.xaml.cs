@@ -50,6 +50,8 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private void btTutor_Click(object sender, RoutedEventArgs e)
         {
+            WindowRegistrarTutorAcademico ventanaRegistrarTutor = new WindowRegistrarTutorAcademico();
+            ventanaRegistrarTutor.Show();
 
         }
 

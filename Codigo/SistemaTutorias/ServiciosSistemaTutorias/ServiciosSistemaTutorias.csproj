@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MensajeInicioSesion.cs" />
+    <Compile Include="Modelo\AcademicoDAO.cs" />
     <Compile Include="Modelo\DataClassesSistemaTutorias.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

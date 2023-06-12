@@ -1692,6 +1692,12 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerProgramaEducativos", ReplyAction="http://tempuri.org/IService1/obtenerProgramaEducativosResponse")]
         System.Threading.Tasks.Task<ServiceReference1.ProgramasEducativos[]> obtenerProgramaEducativosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarRolAcademico", ReplyAction="http://tempuri.org/IService1/registrarRolAcademicoResponse")]
+        System.Threading.Tasks.Task<bool> registrarRolAcademicoAsync(string numPersonal, string password, int idRol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerAcademicos", ReplyAction="http://tempuri.org/IService1/obtenerAcademicosResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.Academicos[]> obtenerAcademicosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1787,6 +1793,16 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.ProgramasEducativos[]> obtenerProgramaEducativosAsync()
         {
             return base.Channel.obtenerProgramaEducativosAsync();
+        }
+        
+        public System.Threading.Tasks.Task<bool> registrarRolAcademicoAsync(string numPersonal, string password, int idRol)
+        {
+            return base.Channel.registrarRolAcademicoAsync(numPersonal, password, idRol);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.Academicos[]> obtenerAcademicosAsync()
+        {
+            return base.Channel.obtenerAcademicosAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

@@ -1,27 +1,24 @@
-﻿<Window x:Class="ClienteSistemaTutorias.InterfacesUsuario.CUs.RegistrarTutorAcademico"
+﻿<Window x:Class="ClienteSistemaTutorias.InterfacesUsuario.WindowRegistrarTutorAcademico"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario.CUs"
+        xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario"
         mc:Ignorable="d"
-        Title="RegistrarTutorAcademico" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="Registrar Tutor Academico" Height="450" Width="800">
     <Grid>
-        <Label Content="No. Personal:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Width="141" FontSize="20"/>
-        <TextBox x:Name="tbNumPersonal" HorizontalAlignment="Left" Margin="137,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="205" FontSize="16"/>
-        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="141" FontSize="20"/>
-        <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Margin="116,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" FontSize="16"/>
-        <Label Content="Apellido Paterno:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="160" FontSize="20"/>
-        <TextBox x:Name="tbApellidoPaterno" HorizontalAlignment="Left" Margin="185,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="226" FontSize="16"/>
-        <Label Content="Apellido Materno:" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top" Width="175" FontSize="20"/>
-        <TextBox x:Name="tbApellidoMaterno" HorizontalAlignment="Left" Margin="185,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" FontSize="16"/>
-        <Label Content="Correo:" HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="80" FontSize="20"/>
-        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Margin="95,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" FontSize="16"/>
-        <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="400,76,0,0" VerticalAlignment="Top" Width="90" FontSize="20" RenderTransformOrigin="3.794,-0.504"/>
-        <TextBox x:Name="tbTelefono" HorizontalAlignment="Left" Margin="495,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" FontSize="16"/>
-        <Label Content="Programa Educativo:" HorizontalAlignment="Left" Margin="400,139,0,0" VerticalAlignment="Top" Width="194" FontSize="20" RenderTransformOrigin="3.794,-0.504"/>
-        <ComboBox HorizontalAlignment="Left" Margin="594,146,0,0" VerticalAlignment="Top" Width="196" Height="30" FontSize="16"/>
-        <Button x:Name="btGuardarEstudiante" Content="Guardar" HorizontalAlignment="Left" Margin="606,281,0,0" VerticalAlignment="Top" FontSize="16" Width="74" Height="33" Click="btGuardarTutor_Click"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="627,103,0,0" VerticalAlignment="Top" Width="100" FontSize="20"/>
+        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Margin="564,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" FontSize="16"/>
+        <Button x:Name="btGuardarTutor" Content="Guardar" HorizontalAlignment="Left" Margin="634,217,0,0" VerticalAlignment="Top" FontSize="20" Width="86" Height="47" Click="btGuardarTutor_Click"/>
+        <DataGrid x:Name="dgAcademicos" AutoGenerateColumns="False" Margin="0,0,266,0" CanUserAddRows="False" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Num Personal" Binding="{Binding numPersonal}" Width="108" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Apellido Paterno" Binding="{Binding apellidoPaterno}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Apellido Materno" Binding="{Binding apellidoMaterno}" Width="*" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
