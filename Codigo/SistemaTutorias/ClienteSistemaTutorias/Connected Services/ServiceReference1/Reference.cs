@@ -1686,6 +1686,12 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/modificarTutoriaAcademica", ReplyAction="http://tempuri.org/IService1/modificarTutoriaAcademicaResponse")]
         System.Threading.Tasks.Task<bool> modificarTutoriaAcademicaAsync(int IDTutoria, System.DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarEstudiante", ReplyAction="http://tempuri.org/IService1/registrarEstudianteResponse")]
+        System.Threading.Tasks.Task<bool> registrarEstudianteAsync(string matricula, string nombre, string apellidoPaterno, string apellidoMaterno, string correo, string telefono, int idProgramaEducativo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerProgramaEducativos", ReplyAction="http://tempuri.org/IService1/obtenerProgramaEducativosResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.ProgramasEducativos[]> obtenerProgramaEducativosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1771,6 +1777,16 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<bool> modificarTutoriaAcademicaAsync(int IDTutoria, System.DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria)
         {
             return base.Channel.modificarTutoriaAcademicaAsync(IDTutoria, FechaTutoria, NumSesionTutoria, IDPeriodoEscolarTutoria, IDRolAcademicoTutoria);
+        }
+        
+        public System.Threading.Tasks.Task<bool> registrarEstudianteAsync(string matricula, string nombre, string apellidoPaterno, string apellidoMaterno, string correo, string telefono, int idProgramaEducativo)
+        {
+            return base.Channel.registrarEstudianteAsync(matricula, nombre, apellidoPaterno, apellidoMaterno, correo, telefono, idProgramaEducativo);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.ProgramasEducativos[]> obtenerProgramaEducativosAsync()
+        {
+            return base.Channel.obtenerProgramaEducativosAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

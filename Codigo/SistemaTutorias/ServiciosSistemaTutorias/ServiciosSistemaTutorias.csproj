@@ -72,7 +72,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesSistemaTutorias.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\EstudianteDAO.cs" />
     <Compile Include="Modelo\PeriodosEscolaresDAO.cs" />
+    <Compile Include="Modelo\ProgramaEducativosDAO.cs" />
     <Compile Include="Modelo\ReportesTutoriaDAO.cs" />
     <Compile Include="Modelo\RolesAcademicosDAO.cs" />
     <Compile Include="Modelo\TutoriasAcademicasDAO.cs" />

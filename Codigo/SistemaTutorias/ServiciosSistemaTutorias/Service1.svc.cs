@@ -48,5 +48,14 @@ namespace ServiciosSistemaTutorias
         {
             return TutoriasAcademicasDAO.modificarTutoriaAcademica(IDTutoria, FechaTutoria, NumSesionTutoria, IDPeriodoEscolarTutoria, IDRolAcademicoTutoria);
         }
+        public bool registrarEstudiante(string matricula, string nombre, string apellidoPaterno, string apellidoMaterno, string correo, string telefono, int idProgramaEducativo)
+        {
+            return EstudianteDAO.registrarEstudiante(matricula, nombre, apellidoPaterno, apellidoMaterno, correo, telefono, idProgramaEducativo);
+        }
+
+        public List<ProgramasEducativos> obtenerProgramaEducativos()
+        {
+            return ProgramaEducativosDAO.obtenerProgramaEducativos();
+        }
     }
 }

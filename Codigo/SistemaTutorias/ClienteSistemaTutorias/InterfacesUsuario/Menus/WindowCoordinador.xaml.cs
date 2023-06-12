@@ -22,11 +22,13 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
     {
         RolesAcademicos rolAcademico;
         Academicos academico;
+        MensajeInicioSesion usuarioCoordinador;
         public WindowCoordinador(MensajeInicioSesion usuario)
         {
             InitializeComponent();
             rolAcademico = usuario.usuarioRolAcademico;
             academico = usuario.usuarioAcademico;
+            usuarioCoordinador = usuario;
             lbBienvenido.Content = academico.Nombres + " " + academico.ApellidoPaterno + " " + academico.ApellidoMaterno;
         }
 
@@ -42,7 +44,8 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private void btEstudiante_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowRegistrarEstudiante ventanaRegistrarEstudiante = new WindowRegistrarEstudiante();
+            ventanaRegistrarEstudiante.Show();
         }
 
         private void btTutor_Click(object sender, RoutedEventArgs e)
@@ -57,6 +60,9 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private void btCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
+            WindowInicioSesion ventanaInicioSesion = new WindowInicioSesion();
+            ventanaInicioSesion.Show();
+            Close();
 
         }
     }
