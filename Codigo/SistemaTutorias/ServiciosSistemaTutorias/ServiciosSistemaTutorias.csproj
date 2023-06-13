@@ -66,6 +66,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosProblematicaAcademica.cs" />
     <Compile Include="MensajeInicioSesion.cs" />
     <Compile Include="Modelo\AcademicoDAO.cs" />
     <Compile Include="Modelo\DataClassesSistemaTutorias.designer.cs">
@@ -75,6 +76,7 @@
     </Compile>
     <Compile Include="Modelo\EstudianteDAO.cs" />
     <Compile Include="Modelo\PeriodosEscolaresDAO.cs" />
+    <Compile Include="Modelo\ProblematicasAcademicasDAO.cs" />
     <Compile Include="Modelo\ProgramaEducativosDAO.cs" />
     <Compile Include="Modelo\ReportesTutoriaDAO.cs" />
     <Compile Include="Modelo\RolesAcademicosDAO.cs" />

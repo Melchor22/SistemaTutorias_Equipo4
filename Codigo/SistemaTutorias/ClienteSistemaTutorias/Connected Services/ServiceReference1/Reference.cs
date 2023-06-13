@@ -1706,6 +1706,88 @@ namespace ServiceReference1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DatosProblematicaAcademica", Namespace="http://schemas.datacontract.org/2004/07/ServiciosSistemaTutorias")]
+    public partial class DatosProblematicaAcademica : object
+    {
+        
+        private ServiceReference1.CategoriasProblematica categoriaProblematicaField;
+        
+        private ServiceReference1.Estudiantes estudianteField;
+        
+        private ServiceReference1.ExperienciasEducativas experienciaEducativaField;
+        
+        private ServiceReference1.ProblematicasAcademicas problematicaAcademicaField;
+        
+        private ServiceReference1.TutoriasAcademicasEstudiantes tutoriaAcademicaEstudianteField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.CategoriasProblematica categoriaProblematica
+        {
+            get
+            {
+                return this.categoriaProblematicaField;
+            }
+            set
+            {
+                this.categoriaProblematicaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.Estudiantes estudiante
+        {
+            get
+            {
+                return this.estudianteField;
+            }
+            set
+            {
+                this.estudianteField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ExperienciasEducativas experienciaEducativa
+        {
+            get
+            {
+                return this.experienciaEducativaField;
+            }
+            set
+            {
+                this.experienciaEducativaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.ProblematicasAcademicas problematicaAcademica
+        {
+            get
+            {
+                return this.problematicaAcademicaField;
+            }
+            set
+            {
+                this.problematicaAcademicaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.TutoriasAcademicasEstudiantes tutoriaAcademicaEstudiante
+        {
+            get
+            {
+                return this.tutoriaAcademicaEstudianteField;
+            }
+            set
+            {
+                this.tutoriaAcademicaEstudianteField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1
@@ -1752,6 +1834,9 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerTutores", ReplyAction="http://tempuri.org/IService1/obtenerTutoresResponse")]
         System.Threading.Tasks.Task<ServiceReference1.RolesAcademicos[]> obtenerTutoresAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerProblematicasAcademicas", ReplyAction="http://tempuri.org/IService1/obtenerProblematicasAcademicasResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.DatosProblematicaAcademica[]> obtenerProblematicasAcademicasAsync(int IDTutoriaAcademica);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1872,6 +1957,11 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.RolesAcademicos[]> obtenerTutoresAsync()
         {
             return base.Channel.obtenerTutoresAsync();
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.DatosProblematicaAcademica[]> obtenerProblematicasAcademicasAsync(int IDTutoriaAcademica)
+        {
+            return base.Channel.obtenerProblematicasAcademicasAsync(IDTutoriaAcademica);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

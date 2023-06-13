@@ -82,5 +82,10 @@ namespace ServiciosSistemaTutorias
         {
             return RolesAcademicosDAO.obtenerTutores();
         }
+
+        public DatosProblematicaAcademica[] obtenerProblematicasAcademicas(int IDTutoriaAcademica)
+        {
+            return ProblematicasAcademicasDAO.obtenerProblematicasAcademicas(IDTutoriaAcademica);
+        }
     }
 }

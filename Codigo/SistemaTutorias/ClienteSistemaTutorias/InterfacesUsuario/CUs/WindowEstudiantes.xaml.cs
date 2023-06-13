@@ -41,8 +41,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             if (dgEstudiantes.SelectedItem != null)
             {
                 DatosEstudiante estudianteSeleccionadoFila = (DatosEstudiante)dgEstudiantes.SelectedItem;
-                string estudiante =  dgEstudiantes.SelectedItem.ToString();
-                string matricula = (estudiante.Split(' ')[0].Trim());
+                string matricula = estudianteSeleccionadoFila.matricula;
                 WindowAsignarTutor ventanaAsignarTutor = new WindowAsignarTutor(matricula);
                 ventanaAsignarTutor.Show();
 

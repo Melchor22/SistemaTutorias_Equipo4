@@ -1,4 +1,5 @@
-﻿using ServiceReference1;
+﻿using ClienteSistemaTutorias.Modelo;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,8 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
             tutoriaSeleccionada = tutoria;
             tutorSesion = tutor;
             InitializeComponent();
+            ProblematicaAcademicaViewModel vmProblematicaAcademica = new ProblematicaAcademicaViewModel(tutoriaSeleccionada.tutoria.IDTutoriaAcademica);
+            dgProblematicasAcademicas.ItemsSource = vmProblematicaAcademica.problematicaViewModel;
         }
 
         private void btRegistrarProblematica_Click(object sender, RoutedEventArgs e)

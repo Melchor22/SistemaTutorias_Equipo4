@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
     public partial class WindowAsignarTutor : Window
     {
         RolesAcademicos[] tutoresObtenidosBD;
-        private string matriculaR;
+        string matriculaR;
         public WindowAsignarTutor(string matricula)
         {
             InitializeComponent();
@@ -63,6 +64,8 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         {
             using (var conexionServicios = new Service1Client())
             {
+                Debug.WriteLine(matricula);
+                Debug.WriteLine(tutor);
                 Task<bool> resultadoOperacion = conexionServicios.asignarTutorAsync(matricula, tutor);
                 bool registroExitoso = await resultadoOperacion;
                 if (registroExitoso)

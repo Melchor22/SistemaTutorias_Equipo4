@@ -34,19 +34,29 @@ namespace ServiciosSistemaTutorias
 
         [OperationContract]
         bool modificarTutoriaAcademica(int IDTutoria, DateTime FechaTutoria, int NumSesionTutoria, int IDPeriodoEscolarTutoria, int IDRolAcademicoTutoria);
+        
         [OperationContract]
         bool registrarEstudiante(string matricula, string nombre, string apellidoPaterno, string apellidoMaterno, string correo, string telefono, int idProgramaEducativo);
+        
         [OperationContract]
         List<ProgramasEducativos> obtenerProgramaEducativos();
+        
         [OperationContract]
         Boolean registrarRolAcademico(string numPersonal, string password, int idRol);
+        
         [OperationContract]
         List<Academicos> obtenerAcademicos();
+        
         [OperationContract]
         List<Estudiantes> obtenerEstudiantes();
+        
         [OperationContract]
         Boolean asignarTutor(string matricula, int idTutor);
+        
         [OperationContract]
         List<RolesAcademicos> obtenerTutores();
+
+        [OperationContract]
+        DatosProblematicaAcademica[] obtenerProblematicasAcademicas(int IDTutoriaAcademica);
     }
 }
