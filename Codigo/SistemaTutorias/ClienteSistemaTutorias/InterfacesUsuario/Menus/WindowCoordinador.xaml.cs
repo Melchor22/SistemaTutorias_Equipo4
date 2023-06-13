@@ -44,8 +44,8 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private void btEstudiante_Click(object sender, RoutedEventArgs e)
         {
-            WindowRegistrarEstudiante ventanaRegistrarEstudiante = new WindowRegistrarEstudiante();
-            ventanaRegistrarEstudiante.Show();
+            WindowEstudiantes ventanaEstudiantes = new WindowEstudiantes();
+            ventanaEstudiantes.Show();
         }
 
         private void btTutor_Click(object sender, RoutedEventArgs e)

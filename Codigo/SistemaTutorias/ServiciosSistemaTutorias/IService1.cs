@@ -42,5 +42,11 @@ namespace ServiciosSistemaTutorias
         Boolean registrarRolAcademico(string numPersonal, string password, int idRol);
         [OperationContract]
         List<Academicos> obtenerAcademicos();
+        [OperationContract]
+        List<Estudiantes> obtenerEstudiantes();
+        [OperationContract]
+        Boolean asignarTutor(string matricula, int idTutor);
+        [OperationContract]
+        List<RolesAcademicos> obtenerTutores();
     }
 }

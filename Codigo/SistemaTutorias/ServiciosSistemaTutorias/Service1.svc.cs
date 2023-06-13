@@ -67,5 +67,20 @@ namespace ServiciosSistemaTutorias
         {
             return AcademicoDAO.obtenerAcademicos();
         }
+
+        public List<Estudiantes> obtenerEstudiantes()
+        {
+            return EstudianteDAO.obtenerEstudiantes();
+        }
+
+        public Boolean asignarTutor(string matricula, int idTutor)
+        {
+            return EstudianteDAO.asignarTutor(matricula, idTutor);
+        }
+
+        public List<RolesAcademicos> obtenerTutores()
+        {
+            return RolesAcademicosDAO.obtenerTutores();
+        }
     }
 }

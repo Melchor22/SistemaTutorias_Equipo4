@@ -37,6 +37,58 @@ namespace ServiciosSistemaTutorias.Modelo
             }
         }
 
+        public static List<Estudiantes> obtenerEstudiantes()
+        {
+            DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
+            var estudiantesBD = from estudiante in conexionBD.Estudiantes
+                               select estudiante;
+            List<Estudiantes> estudiantesObtenidos = new List<Estudiantes>();
+            foreach (var item in estudiantesBD)
+            {
+                Estudiantes estudianteBucle = new Estudiantes()
+                {
+                    Matricula = item.Matricula,
+                    Nombres = item.Nombres,
+                    ApellidoPaterno = item.ApellidoPaterno,
+                    ApellidoMaterno = item.ApellidoMaterno,
+                    Correo = item.Correo,
+                    Telefono = item.Telefono,
+                    IDProgramaEducativo = item.IDProgramaEducativo,
+                    Tutor = item.Tutor,
+                };
+                estudiantesObtenidos.Add(estudianteBucle);
+            }
+            return estudiantesObtenidos;
+        }
+
+        public static Boolean asignarTutor(string matricula, int idTutor)
+        {
+            try
+            {
+                DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
+                var asignacion = (from estudiante in conexionBD.Estudiantes
+                                 where matricula == estudiante.Matricula
+                                 select estudiante).FirstOrDefault();
+                if( asignacion != null )
+                {
+                    asignacion.Tutor = idTutor;
+
+                    conexionBD.SubmitChanges();
+                    return true;
+                }
+                else {  return false; }
+
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
         public static DataClassesSistemaTutoriasDataContext getConnection()
         {
             return new DataClassesSistemaTutoriasDataContext(global::System.Configuration.ConfigurationManager.ConnectionStrings["SistemaTutoriasConnectionString"].ConnectionString);

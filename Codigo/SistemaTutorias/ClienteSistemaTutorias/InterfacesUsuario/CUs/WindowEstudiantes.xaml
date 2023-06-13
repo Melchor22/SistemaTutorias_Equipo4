@@ -1,0 +1,24 @@
+﻿<Window x:Class="ClienteSistemaTutorias.InterfacesUsuario.WindowEstudiantes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Estudiantes" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgEstudiantes" AutoGenerateColumns="False" Margin="0,38,160,0" CanUserAddRows="False" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Matricula" Binding="{Binding matricula}" Width="108" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Apellido Paterno" Binding="{Binding apellidoPaterno}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Apellido Materno" Binding="{Binding apellidoMaterno}" Width="*" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btRegistrarEstudiante" Content="Nuevo Estudiante" HorizontalAlignment="Left" Margin="655,136,0,0" VerticalAlignment="Top" FontSize="16" Height="41" Width="135" Click="btRegistrarEstudiante_Click"/>
+        <Button x:Name="btAsignarTutor" Content="Asignar Tutor" HorizontalAlignment="Left" Margin="655,0,0,0" VerticalAlignment="Center" FontSize="16" Height="41" Width="135" Click="btAsignarTutor_Click"/>
+        <Label Content="Estudiantes" HorizontalAlignment="Left" Margin="270,4,0,0" VerticalAlignment="Top" FontSize="18"/>
+
+    </Grid>
+</Window>

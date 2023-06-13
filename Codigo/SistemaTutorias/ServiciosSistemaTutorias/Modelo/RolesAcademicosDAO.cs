@@ -75,6 +75,40 @@ namespace ServiciosSistemaTutorias.Modelo
             }
         }
 
+        public static List<RolesAcademicos> obtenerTutores()
+        {
+            DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+            var tutores = from tutor in conexionBD.RolesAcademicos
+                           join academico in conexionBD.Academicos on tutor.NumPersonal equals academico.NumPersonal
+                           where tutor.IDRol == 3
+                           select new { tutor, academico };
+
+            List<RolesAcademicos> tutoresObtenidos = new List<RolesAcademicos>();
+
+            foreach (var item in tutores)
+            {
+                RolesAcademicos tutoresBucle = new RolesAcademicos()
+                {
+                    IDRolAcademico = item.tutor.IDRolAcademico,
+                    NumPersonal = item.tutor.NumPersonal,
+                    Password = item.tutor.Password,
+                    IDRol = item.tutor.IDRol,
+                };
+
+                Academicos academicosBucle = new Academicos()
+                {
+                    NumPersonal = item.academico.NumPersonal,
+                    Nombres = item.academico.Nombres,
+                    ApellidoPaterno = item.academico.ApellidoPaterno,
+                    ApellidoMaterno = item.academico.ApellidoMaterno,
+                    Correo = item.academico.Correo,
+                    Telefono = item.academico.Telefono
+                };
+                tutoresObtenidos.Add(tutoresBucle);
+            }
+            return tutoresObtenidos;
+        }
+
         public static DataClassesSistemaTutoriasDataContext getConnection()
         {
             return new DataClassesSistemaTutoriasDataContext(global::System.Configuration.ConfigurationManager.ConnectionStrings["SistemaTutoriasConnectionString"].ConnectionString);

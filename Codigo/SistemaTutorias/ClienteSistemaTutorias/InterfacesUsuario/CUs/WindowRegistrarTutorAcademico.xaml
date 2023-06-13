@@ -11,7 +11,7 @@
         <Label Content="Password:" HorizontalAlignment="Left" Margin="627,103,0,0" VerticalAlignment="Top" Width="100" FontSize="20"/>
         <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Margin="564,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" FontSize="16"/>
         <Button x:Name="btGuardarTutor" Content="Guardar" HorizontalAlignment="Left" Margin="634,217,0,0" VerticalAlignment="Top" FontSize="20" Width="86" Height="47" Click="btGuardarTutor_Click"/>
-        <DataGrid x:Name="dgAcademicos" AutoGenerateColumns="False" Margin="0,0,266,0" CanUserAddRows="False" FontSize="16">
+        <DataGrid x:Name="dgAcademicos" AutoGenerateColumns="False" Margin="0,38,266,0" CanUserAddRows="False" FontSize="16">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Num Personal" Binding="{Binding numPersonal}" Width="108" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="*" IsReadOnly="True"/>
@@ -19,6 +19,7 @@
                 <DataGridTextColumn Header="Apellido Materno" Binding="{Binding apellidoMaterno}" Width="*" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Label Content="Académicos" HorizontalAlignment="Left" Margin="217,-4,0,0" VerticalAlignment="Top" Width="119" FontSize="20"/>
 
     </Grid>
 </Window>

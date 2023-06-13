@@ -1,4 +1,5 @@
 ﻿using ClienteSistemaTutorias.Modelo;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,10 +35,15 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
             if (validacion)
             {
+                DatosAcademico filaSeleccionada = (DatosAcademico)dgAcademicos.SelectedItem;
+                string numPersonal = filaSeleccionada.numPersonal;
+                int rolAcademico = 3;
+                RegistrarTutorNuevo(numPersonal, password, rolAcademico);
+
 
             }else
             {
-                MessageBox.Show("Favor de proporcionar una contraseña.");
+                MessageBox.Show("Favor de llenar los campos");
             }
 
         }
@@ -45,13 +51,30 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         private bool VerificarCampos(string password)
         {
 
-            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(password) || dgAcademicos.SelectedItem == null)
             {
                 return false;
             }
             else
             {
                 return true;
+            }
+        }
+
+        private async void RegistrarTutorNuevo(string numPersonal, string password, int idRol)
+        {
+            using (var conexionServicios = new Service1Client())
+            {
+                Task<bool> resultadoOperacion = conexionServicios.registrarRolAcademicoAsync(numPersonal, password, idRol);
+                bool registroExitoso = await resultadoOperacion;
+                if (registroExitoso)
+                {
+                    MessageBox.Show("Tutor registrado Exitosamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error en el registro.");
+                }
             }
         }
     }
