@@ -68,10 +68,10 @@
   <ItemGroup>
     <Compile Include="MensajeInicioSesion.cs" />
     <Compile Include="Modelo\AcademicoDAO.cs" />
-    <Compile Include="Modelo\DataClassesSistemaTutorias.designer.cs">
+    <Compile Include="Modelo\DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClassesSistemaTutorias.dbml</DependentUpon>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="Modelo\EstudianteDAO.cs" />
     <Compile Include="Modelo\PeriodosEscolaresDAO.cs" />
@@ -90,13 +90,13 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modelo\DataClassesSistemaTutorias.dbml">
+    <Content Include="Modelo\DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClassesSistemaTutorias.designer.cs</LastGenOutput>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Modelo\DataClassesSistemaTutorias.dbml.layout">
-      <DependentUpon>DataClassesSistemaTutorias.dbml</DependentUpon>
+    <None Include="Modelo\DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

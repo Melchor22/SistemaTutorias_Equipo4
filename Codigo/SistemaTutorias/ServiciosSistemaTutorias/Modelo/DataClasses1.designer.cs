@@ -23,7 +23,7 @@ namespace ServiciosSistemaTutorias.Modelo
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SistemaTutorias")]
-	public partial class DataClassesSistemaTutoriasDataContext : System.Data.Linq.DataContext
+	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -77,25 +77,25 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void DeleteTutoriasAcademicasEstudiantes(TutoriasAcademicasEstudiantes instance);
     #endregion
 		
-		public DataClassesSistemaTutoriasDataContext(string connection) : 
+		public DataClasses1DataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClassesSistemaTutoriasDataContext(System.Data.IDbConnection connection) : 
+		public DataClasses1DataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClassesSistemaTutoriasDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataClasses1DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClassesSistemaTutoriasDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataClasses1DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -708,11 +708,15 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private System.Nullable<int> _IDProgramaEducativo;
 		
+		private System.Nullable<int> _Tutor;
+		
 		private EntitySet<ExperienciasEducativasEstudiantes> _ExperienciasEducativasEstudiantes;
 		
 		private EntitySet<TutoriasAcademicasEstudiantes> _TutoriasAcademicasEstudiantes;
 		
 		private EntityRef<ProgramasEducativos> _ProgramasEducativos;
+		
+		private EntityRef<RolesAcademicos> _RolesAcademicos;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -732,6 +736,8 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void OnTelefonoChanged();
     partial void OnIDProgramaEducativoChanging(System.Nullable<int> value);
     partial void OnIDProgramaEducativoChanged();
+    partial void OnTutorChanging(System.Nullable<int> value);
+    partial void OnTutorChanged();
     #endregion
 		
 		public Estudiantes()
@@ -739,6 +745,7 @@ namespace ServiciosSistemaTutorias.Modelo
 			this._ExperienciasEducativasEstudiantes = new EntitySet<ExperienciasEducativasEstudiantes>(new Action<ExperienciasEducativasEstudiantes>(this.attach_ExperienciasEducativasEstudiantes), new Action<ExperienciasEducativasEstudiantes>(this.detach_ExperienciasEducativasEstudiantes));
 			this._TutoriasAcademicasEstudiantes = new EntitySet<TutoriasAcademicasEstudiantes>(new Action<TutoriasAcademicasEstudiantes>(this.attach_TutoriasAcademicasEstudiantes), new Action<TutoriasAcademicasEstudiantes>(this.detach_TutoriasAcademicasEstudiantes));
 			this._ProgramasEducativos = default(EntityRef<ProgramasEducativos>);
+			this._RolesAcademicos = default(EntityRef<RolesAcademicos>);
 			OnCreated();
 		}
 		
@@ -886,6 +893,30 @@ namespace ServiciosSistemaTutorias.Modelo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tutor", DbType="Int")]
+		public System.Nullable<int> Tutor
+		{
+			get
+			{
+				return this._Tutor;
+			}
+			set
+			{
+				if ((this._Tutor != value))
+				{
+					if (this._RolesAcademicos.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnTutorChanging(value);
+					this.SendPropertyChanging();
+					this._Tutor = value;
+					this.SendPropertyChanged("Tutor");
+					this.OnTutorChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Estudiantes_ExperienciasEducativasEstudiantes", Storage="_ExperienciasEducativasEstudiantes", ThisKey="Matricula", OtherKey="Matricula")]
 		public EntitySet<ExperienciasEducativasEstudiantes> ExperienciasEducativasEstudiantes
 		{
@@ -942,6 +973,40 @@ namespace ServiciosSistemaTutorias.Modelo
 						this._IDProgramaEducativo = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("ProgramasEducativos");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RolesAcademicos_Estudiantes", Storage="_RolesAcademicos", ThisKey="Tutor", OtherKey="IDRolAcademico", IsForeignKey=true)]
+		public RolesAcademicos RolesAcademicos
+		{
+			get
+			{
+				return this._RolesAcademicos.Entity;
+			}
+			set
+			{
+				RolesAcademicos previousValue = this._RolesAcademicos.Entity;
+				if (((previousValue != value) 
+							|| (this._RolesAcademicos.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._RolesAcademicos.Entity = null;
+						previousValue.Estudiantes.Remove(this);
+					}
+					this._RolesAcademicos.Entity = value;
+					if ((value != null))
+					{
+						value.Estudiantes.Add(this);
+						this._Tutor = value.IDRolAcademico;
+					}
+					else
+					{
+						this._Tutor = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("RolesAcademicos");
 				}
 			}
 		}
@@ -2566,6 +2631,8 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		private string _NumPersonal;
 		
+		private EntitySet<Estudiantes> _Estudiantes;
+		
 		private EntitySet<ReportesGenerales> _ReportesGenerales;
 		
 		private EntitySet<TutoriasAcademicas> _TutoriasAcademicas;
@@ -2590,6 +2657,7 @@ namespace ServiciosSistemaTutorias.Modelo
 		
 		public RolesAcademicos()
 		{
+			this._Estudiantes = new EntitySet<Estudiantes>(new Action<Estudiantes>(this.attach_Estudiantes), new Action<Estudiantes>(this.detach_Estudiantes));
 			this._ReportesGenerales = new EntitySet<ReportesGenerales>(new Action<ReportesGenerales>(this.attach_ReportesGenerales), new Action<ReportesGenerales>(this.detach_ReportesGenerales));
 			this._TutoriasAcademicas = new EntitySet<TutoriasAcademicas>(new Action<TutoriasAcademicas>(this.attach_TutoriasAcademicas), new Action<TutoriasAcademicas>(this.detach_TutoriasAcademicas));
 			this._Roles = default(EntityRef<Roles>);
@@ -2682,6 +2750,19 @@ namespace ServiciosSistemaTutorias.Modelo
 					this.SendPropertyChanged("NumPersonal");
 					this.OnNumPersonalChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RolesAcademicos_Estudiantes", Storage="_Estudiantes", ThisKey="IDRolAcademico", OtherKey="Tutor")]
+		public EntitySet<Estudiantes> Estudiantes
+		{
+			get
+			{
+				return this._Estudiantes;
+			}
+			set
+			{
+				this._Estudiantes.Assign(value);
 			}
 		}
 		
@@ -2797,6 +2878,18 @@ namespace ServiciosSistemaTutorias.Modelo
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Estudiantes(Estudiantes entity)
+		{
+			this.SendPropertyChanging();
+			entity.RolesAcademicos = this;
+		}
+		
+		private void detach_Estudiantes(Estudiantes entity)
+		{
+			this.SendPropertyChanging();
+			entity.RolesAcademicos = null;
 		}
 		
 		private void attach_ReportesGenerales(ReportesGenerales entity)

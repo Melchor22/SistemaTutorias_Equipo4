@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,17 +20,21 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
     /// </summary>
     public partial class WindowProblematicaAcademica : Window
     {
-        public WindowProblematicaAcademica()
+        TutoriaPeriodo tutoriaSeleccionada;
+        MensajeInicioSesion tutorSesion;
+        public WindowProblematicaAcademica(TutoriaPeriodo tutoria, MensajeInicioSesion tutor)
         {
+            tutoriaSeleccionada = tutoria;
+            tutorSesion = tutor;
             InitializeComponent();
         }
 
-        private void btAgregarSolucion_Click(object sender, RoutedEventArgs e)
+        private void btRegistrarProblematica_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btRegistrarProblematica_Click(object sender, RoutedEventArgs e)
+        private void btSolucion_Click(object sender, RoutedEventArgs e)
         {
 
         }

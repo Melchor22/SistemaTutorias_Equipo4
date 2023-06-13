@@ -20,7 +20,9 @@
             </DataGrid.Columns>
         </DataGrid>
         <Label Content="Sesiones de Tutoría" HorizontalAlignment="Left" Margin="555,10,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Reporte de Tutoría" HorizontalAlignment="Left" Margin="555,158,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="btRegistrarReporte" Content="Nuevo" HorizontalAlignment="Left" Margin="555,217,0,0" VerticalAlignment="Top" FontSize="16" Width="80" Height="40" Click="btRegistrarReporte_Click"/>
+        <Label Content="Reporte de Tutoría" HorizontalAlignment="Left" Margin="555,151,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="btRegistrarReporte" Content="Nuevo" HorizontalAlignment="Left" Margin="555,210,0,0" VerticalAlignment="Top" FontSize="16" Width="80" Height="40" Click="btRegistrarReporte_Click"/>
+        <Label Content="Problematica Académica" HorizontalAlignment="Left" Margin="550,291,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="btGestionProblematica" Content="Gestión Problematica" HorizontalAlignment="Left" Margin="555,347,0,0" VerticalAlignment="Top" FontSize="16" Width="170" Height="40" Click="btGestionProblematica_Click" RenderTransformOrigin="0.545,0.258"/>
     </Grid>
 </Window>

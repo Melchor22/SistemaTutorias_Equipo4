@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario.CUs"
         mc:Ignorable="d"
-        Title="WindowProblematicaAcademica" Height="450" Width="800">
+        Title="WindowProblematicaAcademica" Height="450" Width="800"
+        Icon="..\..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow">
     <Grid>
-        <DataGrid x:Name="dgProblematicasAcademicas" AutoGenerateColumns="False" Margin="0,84,0,50" CanUserAddRows="False" FontSize="20">
+        <DataGrid x:Name="dgProblematicasAcademicas" AutoGenerateColumns="False" Margin="0,69,0,0" CanUserAddRows="False" FontSize="14">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Estudiante" Binding="{Binding estudiante}" Width="220" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Categoría" Binding="{Binding categoria}" Width="*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Materia" Binding="{Binding nrc}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Descripción" Binding="{Binding descripcion}" Width="200" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btRegistrarProblematica" Content="Nueva" HorizontalAlignment="Left" Margin="710,25,0,0" VerticalAlignment="Top" FontSize="20" Width="80" Height="40" Click="btRegistrarProblematica_Click"/>
-        <Button x:Name="btAgregarSolucion" Content="Cambiar a Solucionado" HorizontalAlignment="Left" Margin="466,25,0,0" VerticalAlignment="Top" FontSize="20" Width="220" Height="40" Click="btAgregarSolucion_Click"/>
+        <Button x:Name="btRegistrarProblematica" Content="Registrar Problematica" HorizontalAlignment="Left" Margin="477,15,0,0" VerticalAlignment="Top" FontSize="16" Width="180" Height="40" Click="btRegistrarProblematica_Click"/>
+        <Button x:Name="btSolucion" Content="Solucion" HorizontalAlignment="Left" Margin="681,15,0,0" VerticalAlignment="Top" FontSize="16" Width="80" Height="40" Click="btSolucion_Click"/>
 
     </Grid>
 </Window>

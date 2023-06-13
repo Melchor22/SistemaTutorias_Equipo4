@@ -1,4 +1,5 @@
-﻿using ClienteSistemaTutorias.Modelo;
+﻿using ClienteSistemaTutorias.InterfacesUsuario.CUs;
+using ClienteSistemaTutorias.Modelo;
 using ServiceReference1;
 using System;
 using System.Collections.Generic;
@@ -72,6 +73,28 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
                 WindowReporteTutoria ventanaReporteTutoria = new WindowReporteTutoria(IDRolAcademico, IDTutoria);
                 ventanaReporteTutoria.Show();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una tutoría académica para continuar.");
+            }
+        }
+
+        private async void btGestionProblematica_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (dgTutoriasAcademicas.SelectedItem != null)
+            {
+                DatosTutoria FilaSeleccionada = (DatosTutoria)dgTutoriasAcademicas.SelectedItem;
+
+                int IDTutoria = FilaSeleccionada.idTutoria;
+
+                using (var conexionServicios = new Service1Client())
+                {
+                    TutoriaPeriodo tutoriaObtenida = await conexionServicios.consultarTutoriaAcademicaAsync(IDTutoria);
+                    WindowProblematicaAcademica ventanaProblematicaAcademica = new WindowProblematicaAcademica(tutoriaObtenida, usuarioSesion);
+                    ventanaProblematicaAcademica.Show();
+                }
             }
             else
             {

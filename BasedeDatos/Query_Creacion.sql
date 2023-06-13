@@ -50,6 +50,9 @@ CREATE TABLE Estudiantes (
 	FOREIGN KEY (IDProgramaEducativo) REFERENCES ProgramasEducativos(IDProgramaEducativo)
 );
 
+ALTER TABLE Estudiantes ADD Tutor INT;
+ALTER TABLE Estudiantes ADD FOREIGN KEY (Tutor) REFERENCES RolesAcademicos(IDRolAcademico);
+
 CREATE TABLE ExperienciasEducativas (
 	NRC INT PRIMARY KEY,
 	Nombre NVARCHAR(100),

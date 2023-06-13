@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SistemaTutorias" Class="DataClassesSistemaTutoriasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SistemaTutorias" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Table Name="dbo.Academicos" Member="Academicos">
     <Type Name="Academicos">
       <Column Name="NumPersonal" Type="System.String" DbType="NVarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -34,9 +34,11 @@
       <Column Name="Correo" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
       <Column Name="Telefono" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
       <Column Name="IDProgramaEducativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tutor" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Estudiantes_ExperienciasEducativasEstudiantes" Member="ExperienciasEducativasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="ExperienciasEducativasEstudiantes" />
       <Association Name="Estudiantes_TutoriasAcademicasEstudiantes" Member="TutoriasAcademicasEstudiantes" ThisKey="Matricula" OtherKey="Matricula" Type="TutoriasAcademicasEstudiantes" />
       <Association Name="ProgramasEducativos_Estudiantes" Member="ProgramasEducativos" ThisKey="IDProgramaEducativo" OtherKey="IDProgramaEducativo" Type="ProgramasEducativos" IsForeignKey="true" />
+      <Association Name="RolesAcademicos_Estudiantes" Member="RolesAcademicos" ThisKey="Tutor" OtherKey="IDRolAcademico" Type="RolesAcademicos" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ExperienciasEducativas" Member="ExperienciasEducativas">
@@ -122,6 +124,7 @@
       <Column Name="Password" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="IDRol" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NumPersonal" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Association Name="RolesAcademicos_Estudiantes" Member="Estudiantes" ThisKey="IDRolAcademico" OtherKey="Tutor" Type="Estudiantes" />
       <Association Name="RolesAcademicos_ReportesGenerales" Member="ReportesGenerales" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="ReportesGenerales" />
       <Association Name="RolesAcademicos_TutoriasAcademicas" Member="TutoriasAcademicas" ThisKey="IDRolAcademico" OtherKey="IDRolAcademico" Type="TutoriasAcademicas" />
       <Association Name="Roles_RolesAcademicos" Member="Roles" ThisKey="IDRol" OtherKey="IDRol" Type="Roles" IsForeignKey="true" />
