@@ -23,7 +23,7 @@ namespace ServiciosSistemaTutorias.Modelo
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SistemaTutorias")]
-	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
+	public partial class DataClassesSistemaTutoriasDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -77,25 +77,25 @@ namespace ServiciosSistemaTutorias.Modelo
     partial void DeleteTutoriasAcademicasEstudiantes(TutoriasAcademicasEstudiantes instance);
     #endregion
 		
-		public DataClasses1DataContext(string connection) : 
+		public DataClassesSistemaTutoriasDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection) : 
+		public DataClassesSistemaTutoriasDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataClassesSistemaTutoriasDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DataClassesSistemaTutoriasDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
