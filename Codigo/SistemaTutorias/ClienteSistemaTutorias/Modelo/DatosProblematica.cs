@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ClienteSistemaTutorias.Modelo
 {
     [DataContract]
-    internal class DatosProblematica
+    public class DatosProblematica
     {
         [DataMember]
         public int IDProblematicaAcademica { get; set; }

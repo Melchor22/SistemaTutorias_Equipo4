@@ -1,4 +1,5 @@
-﻿using ServiceReference1;
+﻿using ClienteSistemaTutorias.Modelo;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -24,6 +25,8 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         public WindowSesionesTutoriaCierreReporte()
         {
             InitializeComponent();
+            TutoriaAcademicaViewModel vmTutoriaAcademica = new TutoriaAcademicaViewModel(-1);
+            dgSesionesTutoria.ItemsSource = vmTutoriaAcademica.tutoriaViewModel;
         }
 
         private void btModificarFechaCierre_Click(object sender, RoutedEventArgs e)

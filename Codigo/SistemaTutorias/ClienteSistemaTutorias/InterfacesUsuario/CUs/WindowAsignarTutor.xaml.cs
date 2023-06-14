@@ -34,10 +34,9 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         private void btAsignar_Click(object sender, RoutedEventArgs e)
         {
             string matriculaRecibida = matriculaR;
-            int tutorSeleccionado = ObtenerTutorSeleccionado();
-            AsignarTutor(matriculaRecibida, tutorSeleccionado);
-            
-
+            DatosTutor tutorSeleccionado = tutoresObtenidosBD[cbTutor.SelectedIndex];
+            int idRolTutorSeleccionado = tutorSeleccionado.rolAcademicoTutor.IDRolAcademico;
+            AsignarTutor(matriculaRecibida, idRolTutorSeleccionado);
         }
 
         private async void obtenerTutores()
@@ -50,10 +49,11 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
                 foreach (DatosTutor tutor in tutoresObtenidos)
                 {
-                    string idRol = tutor.academicoTutor.NumPersonal;
+                    string numPersonal = tutor.academicoTutor.NumPersonal;
                     string nombre = tutor.academicoTutor.Nombres;
-                    int idRolAcademico = tutor.rolAcademicoTutor.IDRolAcademico;
-                    string formatoTutores = $"{idRolAcademico} - {nombre.ToString()} - {idRol.ToString()}";
+                    string apellidoPaterno = tutor.academicoTutor.ApellidoPaterno;
+                    string apellidoMaterno = tutor.academicoTutor.ApellidoMaterno;
+                    string formatoTutores = $"{numPersonal.ToString()} - {nombre.ToString()} {apellidoPaterno.ToString()} {apellidoMaterno.ToString()}";
                     listaTutores.Add(formatoTutores);
                 }
 
@@ -65,8 +65,6 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         {
             using (var conexionServicios = new Service1Client())
             {
-                Debug.WriteLine(matricula);
-                Debug.WriteLine(tutor);
                 Task<bool> resultadoOperacion = conexionServicios.asignarTutorAsync(matricula, tutor);
                 bool registroExitoso = await resultadoOperacion;
                 if (registroExitoso)
@@ -78,20 +76,6 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
                     MessageBox.Show("Ocurrio un error en la asignación.");
                 }
             }
-        }
-
-        private int ObtenerTutorSeleccionado()
-        {
-            if (cbTutor.SelectedIndex != -1)
-            {
-                //Da error en la linea siguiente 
-                DatosTutor itemSeleccionado = (DatosTutor)cbTutor.SelectedItem;
-                //string itemSeleccionado = cbTutor.SelectedItem.ToString();
-                int tutor = itemSeleccionado.rolAcademicoTutor.IDRolAcademico;
-                return tutor;
-            }
-            
-            return -1; //Por si no se ha seleccionado ningún programa educativo
-        }   
+        }  
     }
 }

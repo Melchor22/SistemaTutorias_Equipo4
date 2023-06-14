@@ -69,6 +69,31 @@ namespace ServiciosSistemaTutorias.Modelo
             return problematicaBD.ToArray();
         }
 
+        public static bool registrarProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion)
+        {
+            try
+            {
+                DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
+                ProblematicasAcademicas problematicaNueva = new ProblematicasAcademicas
+                {
+                    Estado = "Pendiente",
+                    Descripcion = descripcion,
+                    IDCategoria = IDCategoria,
+                    IDTutoriaAcademicaEstudiante = TutoriasAcademicasEstudiantesDAO.obtenerTutoriaAcademicaEstudianteParaProblematica(IDTutoria, matriculaEstudiante).IDTutoriaAcademicaestudiante,
+                    NRC = NRC
+                };
+                
+                conexionBD.ProblematicasAcademicas.InsertOnSubmit(problematicaNueva);
+                conexionBD.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public static DataClassesSistemaTutoriasDataContext getConnection()
         {
             return new DataClassesSistemaTutoriasDataContext(global::System.Configuration.ConfigurationManager.ConnectionStrings["SistemaTutoriasConnectionString"].ConnectionString);

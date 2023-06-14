@@ -28,11 +28,13 @@ namespace ClienteSistemaTutorias.Modelo
                 {
                     DateTime fechaInicio = (DateTime)tutoria.periodoEscolar.FechaInicio;
                     DateTime fechaFin = (DateTime)tutoria.periodoEscolar.FechaFin;
+                    DateTime? fechaCierreBD = (DateTime?)tutoria.tutoria.FechaCierre;
                     DatosTutoria datosTutoria = new DatosTutoria()
                     {
                         fecha = (DateTime)tutoria.tutoria.Fecha,
                         numSesion = (int)tutoria.tutoria.NumSesion,
                         periodoEscolar = fechaInicio.ToString("MMM yyyy") + " - " + fechaFin.ToString("MMM yyyy"),
+                        fechaCierre = fechaCierreBD.HasValue ? fechaCierreBD.Value.ToString("dd/MM/yyyy") : "No Disponible",
                         idTutoria = tutoria.tutoria.IDTutoriaAcademica
                     };
                     tutoriaViewModel.Add(datosTutoria);

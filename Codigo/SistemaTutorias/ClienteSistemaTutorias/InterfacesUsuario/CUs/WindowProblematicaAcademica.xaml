@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario.CUs"
         mc:Ignorable="d"
-        Title="WindowProblematicaAcademica" Height="450" Width="800"
+        Title="Problematicas Academicas" Height="450" Width="800"
         Icon="..\..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow">
@@ -15,7 +15,7 @@
                 <DataGridTextColumn Header="Estudiante" Binding="{Binding estudiante}" Width="220" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Categoría" Binding="{Binding categoria}" Width="*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Materia" Binding="{Binding nrc}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Materia" Binding="{Binding nrc}" Width="60" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Descripción" Binding="{Binding descripcion}" Width="200" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>

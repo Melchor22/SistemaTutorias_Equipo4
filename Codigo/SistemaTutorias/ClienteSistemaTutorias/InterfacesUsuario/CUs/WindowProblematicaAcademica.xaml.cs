@@ -34,7 +34,11 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
 
         private void btRegistrarProblematica_Click(object sender, RoutedEventArgs e)
         {
+            DatosProblematica problematicaSeleccionada = (DatosProblematica)dgProblematicasAcademicas.SelectedItem;
 
+
+            WindowRegistrarProblematicaAcademica ventanaRegistrarProblematicaAcademica = new WindowRegistrarProblematicaAcademica(tutoriaSeleccionada);
+            ventanaRegistrarProblematicaAcademica.Show();
         }
 
         private void btSolucion_Click(object sender, RoutedEventArgs e)

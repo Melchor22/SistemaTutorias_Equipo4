@@ -14,6 +14,15 @@ namespace ClienteSistemaTutorias.Modelo
         public string idRolAcademico { get; set; }
 
         [DataMember]
+        public string numPersonal { get; set; }
+
+        [DataMember]
         public string nombre { get; set; }
+
+        [DataMember]
+        public string apellidoPaterno { get; set; }
+
+        [DataMember]
+        public string apellidoMaterno { get; set; }
     }
 }

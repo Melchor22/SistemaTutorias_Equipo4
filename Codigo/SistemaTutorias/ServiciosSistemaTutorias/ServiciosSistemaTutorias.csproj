@@ -70,6 +70,7 @@
     <Compile Include="DatosTutor.cs" />
     <Compile Include="MensajeInicioSesion.cs" />
     <Compile Include="Modelo\AcademicoDAO.cs" />
+    <Compile Include="Modelo\CategoriasProblematicaDAO.cs" />
     <Compile Include="Modelo\DataClassesSistemaTutorias.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +83,7 @@
     <Compile Include="Modelo\ReportesTutoriaDAO.cs" />
     <Compile Include="Modelo\RolesAcademicosDAO.cs" />
     <Compile Include="Modelo\TutoriasAcademicasDAO.cs" />
+    <Compile Include="Modelo\TutoriasAcademicasEstudiantesDAO.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

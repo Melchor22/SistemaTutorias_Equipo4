@@ -38,7 +38,7 @@ namespace ServiciosSistemaTutorias.Modelo
             DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
             var tutoriasAcademicasBD = from tutoriaBD in conexionBD.TutoriasAcademicas
                                        join periodoBD in conexionBD.PeriodosEscolares on tutoriaBD.IDPeriodoEscolar equals periodoBD.IDPeriodoEscolar
-                                       where tutoriaBD.IDRolAcademico == IDRolAcademico
+                                       where IDRolAcademico == -1 || tutoriaBD.IDRolAcademico == IDRolAcademico
                                        select new { tutoriaBD, periodoBD };
 
             List<TutoriaPeriodo> tutoriasBD = new List<TutoriaPeriodo>();

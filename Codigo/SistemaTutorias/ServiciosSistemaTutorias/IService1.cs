@@ -61,5 +61,14 @@ namespace ServiciosSistemaTutorias
 
         [OperationContract]
         bool modificarFechaCierre(int idTutoria, DateTime FechaCierre);
+
+        [OperationContract]
+        List<Estudiantes> obtenerEstudiantesPorTutoria(int IDTutoriaAcademica);
+
+        [OperationContract]
+        List<CategoriasProblematica> obtenerCategoriasProblematica();
+
+        [OperationContract]
+        bool registrarProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion);
     }
 }

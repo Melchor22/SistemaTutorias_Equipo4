@@ -92,5 +92,20 @@ namespace ServiciosSistemaTutorias
         {
             return TutoriasAcademicasDAO.modificarFechaCierre(idTutoria, FechaCierre);
         }
+
+        public List<Estudiantes> obtenerEstudiantesPorTutoria(int IDTutoriaAcademica)
+        {
+            return EstudianteDAO.obtenerEstudiantesPorTutoria(IDTutoriaAcademica);
+        }
+
+        public List<CategoriasProblematica> obtenerCategoriasProblematica()
+        {
+            return CategoriasProblematicaDAO.obtenerCategoriasProblematica();
+        }
+
+        public bool registrarProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion)
+        {
+            return ProblematicasAcademicasDAO.registrarProblematicaAcademica(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
+        }
     }
 }

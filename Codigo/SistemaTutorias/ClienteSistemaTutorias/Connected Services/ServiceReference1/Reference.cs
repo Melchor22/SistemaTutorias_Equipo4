@@ -1877,6 +1877,15 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/modificarFechaCierre", ReplyAction="http://tempuri.org/IService1/modificarFechaCierreResponse")]
         System.Threading.Tasks.Task<bool> modificarFechaCierreAsync(int idTutoria, System.DateTime FechaCierre);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerEstudiantesPorTutoria", ReplyAction="http://tempuri.org/IService1/obtenerEstudiantesPorTutoriaResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.Estudiantes[]> obtenerEstudiantesPorTutoriaAsync(int IDTutoriaAcademica);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerCategoriasProblematica", ReplyAction="http://tempuri.org/IService1/obtenerCategoriasProblematicaResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.CategoriasProblematica[]> obtenerCategoriasProblematicaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarProblematicaAcademica", ReplyAction="http://tempuri.org/IService1/registrarProblematicaAcademicaResponse")]
+        System.Threading.Tasks.Task<bool> registrarProblematicaAcademicaAsync(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -2007,6 +2016,21 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<bool> modificarFechaCierreAsync(int idTutoria, System.DateTime FechaCierre)
         {
             return base.Channel.modificarFechaCierreAsync(idTutoria, FechaCierre);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.Estudiantes[]> obtenerEstudiantesPorTutoriaAsync(int IDTutoriaAcademica)
+        {
+            return base.Channel.obtenerEstudiantesPorTutoriaAsync(IDTutoriaAcademica);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.CategoriasProblematica[]> obtenerCategoriasProblematicaAsync()
+        {
+            return base.Channel.obtenerCategoriasProblematicaAsync();
+        }
+        
+        public System.Threading.Tasks.Task<bool> registrarProblematicaAcademicaAsync(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion)
+        {
+            return base.Channel.registrarProblematicaAcademicaAsync(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
