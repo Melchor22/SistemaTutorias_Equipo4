@@ -40,7 +40,9 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
                 DateTime fecha = DateTime.ParseExact(fechaCierreModificada, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 DateTime hora = DateTime.ParseExact(horaCierreModificada, "HH:mm", CultureInfo.InvariantCulture);
                 DateTime fechaHora = new DateTime(fecha.Year, fecha.Month, fecha.Day, hora.Hour, hora.Minute, hora.Second);
-                int idTutoria = 1;
+                DatosTutoria FilaSeleccionada = (DatosTutoria)dgSesionesTutoria.SelectedItem;
+                int idTutoria = FilaSeleccionada.idTutoria;
+
 
                 ModificarFechaCierre(fechaHora, idTutoria);
             }
@@ -54,7 +56,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         private bool VerificarCampos(string fechaObtenida, string horaObtenida)
         {
 
-            if (string.IsNullOrEmpty(fechaObtenida) || string.IsNullOrEmpty(horaObtenida) || dgSesionesTutoria.SelectedItem != null)
+            if (string.IsNullOrEmpty(fechaObtenida) || string.IsNullOrEmpty(horaObtenida) || dgSesionesTutoria.SelectedItem == null)
             {
                 return false;
             }

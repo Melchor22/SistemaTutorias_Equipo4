@@ -15,7 +15,7 @@
                 <DataGridTextColumn Header="Fecha de Cierre" Binding="{Binding fechaCierre}" Width="*" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btModificarFechaCierre" Content="Modificar Fecha Cierre " HorizontalAlignment="Left" Margin="623,0,0,0" VerticalAlignment="Center" FontSize="16" Width="167" Height="52" Click="btModificarFechaCierre_Click" RenderTransformOrigin="0.545,0.258"/>
+        <Button x:Name="btModificarFechaCierre" Content="Modificar Fecha Cierre " HorizontalAlignment="Left" Margin="624,217,0,0" VerticalAlignment="Top" FontSize="16" Width="167" Height="52" Click="btModificarFechaCierre_Click" RenderTransformOrigin="0.545,0.258"/>
         <TextBox x:Name="tbFechaCierreReporte" HorizontalAlignment="Left" Margin="628,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" FontSize="20"/>
         <Label Content="Fecha (DD/MM/YYYY)" HorizontalAlignment="Left" Margin="648,48,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Hora (HH:MM):" HorizontalAlignment="Left" Margin="649,118,0,0" VerticalAlignment="Top" FontSize="16"/>
