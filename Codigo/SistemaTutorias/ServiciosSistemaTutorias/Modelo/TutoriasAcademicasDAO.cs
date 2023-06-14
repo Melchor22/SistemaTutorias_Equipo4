@@ -20,7 +20,8 @@ namespace ServiciosSistemaTutorias.Modelo
                     Fecha = FechaTutoria,
                     NumSesion = NumSesionTutoria,
                     IDPeriodoEscolar = IDPeriodoEscolarTutoria,
-                    IDRolAcademico = IDRolAcademicoTutoria
+                    IDRolAcademico = IDRolAcademicoTutoria,
+                    FechaCierre = FechaTutoria.AddDays(7)
                 };
                 conexionBD.TutoriasAcademicas.InsertOnSubmit(tutoria);
                 conexionBD.SubmitChanges();
