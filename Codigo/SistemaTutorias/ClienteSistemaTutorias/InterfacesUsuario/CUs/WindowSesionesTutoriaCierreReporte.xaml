@@ -1,0 +1,25 @@
+﻿<Window x:Class="ClienteSistemaTutorias.InterfacesUsuario.WindowSesionesTutoriaCierreReporte"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario"
+        mc:Ignorable="d"
+        Title="Cierre de Reporte de Tutorías" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgSesionesTutoria" AutoGenerateColumns="False" Margin="0,0,182,0" CanUserAddRows="False" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding fecha}" Width="120" IsReadOnly="True"/>
+                <DataGridTextColumn Header="#Sesion" Binding="{Binding numSesion}" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Periodo Escolar" Binding="{Binding periodoEscolar}" Width="*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Fecha de Cierre" Binding="{Binding fechaCierre}" Width="*" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btModificarFechaCierre" Content="Modificar Fecha Cierre " HorizontalAlignment="Left" Margin="623,0,0,0" VerticalAlignment="Center" FontSize="16" Width="167" Height="52" Click="btModificarFechaCierre_Click" RenderTransformOrigin="0.545,0.258"/>
+        <TextBox x:Name="tbFechaCierreReporte" HorizontalAlignment="Left" Margin="628,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" FontSize="20"/>
+        <Label Content="Fecha (DD/MM/YYYY)" HorizontalAlignment="Left" Margin="648,48,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Hora (HH:MM):" HorizontalAlignment="Left" Margin="649,118,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="tbHoraCierreReporte" HorizontalAlignment="Left" Margin="628,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" FontSize="20"/>
+
+    </Grid>
+</Window>

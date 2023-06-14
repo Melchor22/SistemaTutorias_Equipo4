@@ -51,7 +51,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         private bool VerificarCampos(string password)
         {
 
-            if (string.IsNullOrEmpty(password) || dgAcademicos.SelectedItem == null)
+            if (string.IsNullOrEmpty(password) || dgAcademicos.SelectedItem != null)
             {
                 return false;
             }

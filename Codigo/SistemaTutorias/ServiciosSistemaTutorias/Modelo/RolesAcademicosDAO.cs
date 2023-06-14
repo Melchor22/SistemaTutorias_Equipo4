@@ -75,38 +75,41 @@ namespace ServiciosSistemaTutorias.Modelo
             }
         }
 
-        public static List<RolesAcademicos> obtenerTutores()
+        public static DatosTutor[] obtenerTutores()
         {
             DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
-            var tutores = from tutor in conexionBD.RolesAcademicos
-                           join academico in conexionBD.Academicos on tutor.NumPersonal equals academico.NumPersonal
-                           where tutor.IDRol == 3
-                           select new { tutor, academico };
+            var tutores = from tutorBD in conexionBD.RolesAcademicos
+                           join academicoBD in conexionBD.Academicos on tutorBD.NumPersonal equals academicoBD.NumPersonal
+                           where tutorBD.IDRol == 3
+                           select new { tutorBD, academicoBD };
 
-            List<RolesAcademicos> tutoresObtenidos = new List<RolesAcademicos>();
+            List<DatosTutor> tutoresObtenidos = new List<DatosTutor>();
 
             foreach (var item in tutores)
             {
-                RolesAcademicos tutoresBucle = new RolesAcademicos()
+                DatosTutor datosTutor = new DatosTutor
                 {
-                    IDRolAcademico = item.tutor.IDRolAcademico,
-                    NumPersonal = item.tutor.NumPersonal,
-                    Password = item.tutor.Password,
-                    IDRol = item.tutor.IDRol,
-                };
+                    academicoTutor = new Academicos
+                    {
+                       NumPersonal = item.academicoBD.NumPersonal,
+                       Nombres = item.academicoBD.Nombres,
+                       ApellidoPaterno = item.academicoBD.ApellidoPaterno,
+                       ApellidoMaterno = item.academicoBD.ApellidoMaterno,
+                       Correo = item.academicoBD.Correo,
+                       Telefono = item.academicoBD.Telefono
+                    },
+                    rolAcademicoTutor = new RolesAcademicos
+                    {
+                        IDRolAcademico = item.tutorBD.IDRolAcademico,
+                        Password = item.tutorBD.Password,
+                        IDRol = item.tutorBD.IDRol,
+                        NumPersonal = item.tutorBD.NumPersonal
+                    }
 
-                Academicos academicosBucle = new Academicos()
-                {
-                    NumPersonal = item.academico.NumPersonal,
-                    Nombres = item.academico.Nombres,
-                    ApellidoPaterno = item.academico.ApellidoPaterno,
-                    ApellidoMaterno = item.academico.ApellidoMaterno,
-                    Correo = item.academico.Correo,
-                    Telefono = item.academico.Telefono
                 };
-                tutoresObtenidos.Add(tutoresBucle);
+                tutoresObtenidos.Add(datosTutor);
             }
-            return tutoresObtenidos;
+            return tutoresObtenidos.ToArray();
         }
 
         public static DataClassesSistemaTutoriasDataContext getConnection()

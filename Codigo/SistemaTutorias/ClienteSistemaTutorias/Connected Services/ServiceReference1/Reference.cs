@@ -1708,6 +1708,43 @@ namespace ServiceReference1
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DatosTutor", Namespace="http://schemas.datacontract.org/2004/07/ServiciosSistemaTutorias")]
+    public partial class DatosTutor : object
+    {
+        
+        private ServiceReference1.Academicos academicoTutorField;
+        
+        private ServiceReference1.RolesAcademicos rolAcademicoTutorField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.Academicos academicoTutor
+        {
+            get
+            {
+                return this.academicoTutorField;
+            }
+            set
+            {
+                this.academicoTutorField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ServiceReference1.RolesAcademicos rolAcademicoTutor
+        {
+            get
+            {
+                return this.rolAcademicoTutorField;
+            }
+            set
+            {
+                this.rolAcademicoTutorField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DatosProblematicaAcademica", Namespace="http://schemas.datacontract.org/2004/07/ServiciosSistemaTutorias")]
     public partial class DatosProblematicaAcademica : object
     {
@@ -1833,10 +1870,13 @@ namespace ServiceReference1
         System.Threading.Tasks.Task<bool> asignarTutorAsync(string matricula, int idTutor);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerTutores", ReplyAction="http://tempuri.org/IService1/obtenerTutoresResponse")]
-        System.Threading.Tasks.Task<ServiceReference1.RolesAcademicos[]> obtenerTutoresAsync();
+        System.Threading.Tasks.Task<ServiceReference1.DatosTutor[]> obtenerTutoresAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerProblematicasAcademicas", ReplyAction="http://tempuri.org/IService1/obtenerProblematicasAcademicasResponse")]
         System.Threading.Tasks.Task<ServiceReference1.DatosProblematicaAcademica[]> obtenerProblematicasAcademicasAsync(int IDTutoriaAcademica);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/modificarFechaCierre", ReplyAction="http://tempuri.org/IService1/modificarFechaCierreResponse")]
+        System.Threading.Tasks.Task<bool> modificarFechaCierreAsync(int idTutoria, System.DateTime FechaCierre);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -1954,7 +1994,7 @@ namespace ServiceReference1
             return base.Channel.asignarTutorAsync(matricula, idTutor);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference1.RolesAcademicos[]> obtenerTutoresAsync()
+        public System.Threading.Tasks.Task<ServiceReference1.DatosTutor[]> obtenerTutoresAsync()
         {
             return base.Channel.obtenerTutoresAsync();
         }
@@ -1962,6 +2002,11 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.DatosProblematicaAcademica[]> obtenerProblematicasAcademicasAsync(int IDTutoriaAcademica)
         {
             return base.Channel.obtenerProblematicasAcademicasAsync(IDTutoriaAcademica);
+        }
+        
+        public System.Threading.Tasks.Task<bool> modificarFechaCierreAsync(int idTutoria, System.DateTime FechaCierre)
+        {
+            return base.Channel.modificarFechaCierreAsync(idTutoria, FechaCierre);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

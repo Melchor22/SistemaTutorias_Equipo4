@@ -55,7 +55,8 @@ namespace ServiciosSistemaTutorias.Modelo
                         NumSesion = t.tutoriaBD.NumSesion,
                         IDRolAcademico = t.tutoriaBD.NumSesion,
                         IDReporteTutoria = t.tutoriaBD.IDReporteTutoria,
-                        IDPeriodoEscolar = t.tutoriaBD.IDPeriodoEscolar
+                        IDPeriodoEscolar = t.tutoriaBD.IDPeriodoEscolar,
+                        FechaCierre = t.tutoriaBD.FechaCierre
                     },
                     periodoEscolar = new PeriodosEscolares
                     {
@@ -132,6 +133,35 @@ namespace ServiciosSistemaTutorias.Modelo
                 return false;
             }
         }
+        public static bool modificarFechaCierre(int idTutoria, DateTime FechaCierre)
+        {
+            try
+            {
+                DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
+                var tutoriaModificarFechaCierre = (from tutoriaModificar in conexionBD.TutoriasAcademicas
+                                        where tutoriaModificar.IDTutoriaAcademica == idTutoria
+                                        select tutoriaModificar).FirstOrDefault();
+
+                if (tutoriaModificarFechaCierre != null)
+                {
+                    tutoriaModificarFechaCierre.FechaCierre = FechaCierre;
+
+                    conexionBD.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
 
         public static DataClassesSistemaTutoriasDataContext getConnection()
         {

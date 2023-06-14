@@ -32,14 +32,10 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             lbBienvenido.Content = academico.Nombres + " " + academico.ApellidoPaterno + " " + academico.ApellidoMaterno;
         }
 
-        private void btSesionTutoria_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btReporteTutoria_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowSesionesTutoriaCierreReporte ventanaCierreReporte = new WindowSesionesTutoriaCierreReporte();
+            ventanaCierreReporte.Show();
         }
 
         private void btEstudiante_Click(object sender, RoutedEventArgs e)

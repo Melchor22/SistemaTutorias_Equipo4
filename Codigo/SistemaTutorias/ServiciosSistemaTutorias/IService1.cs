@@ -54,9 +54,12 @@ namespace ServiciosSistemaTutorias
         Boolean asignarTutor(string matricula, int idTutor);
         
         [OperationContract]
-        List<RolesAcademicos> obtenerTutores();
+        DatosTutor[] obtenerTutores();
 
         [OperationContract]
         DatosProblematicaAcademica[] obtenerProblematicasAcademicas(int IDTutoriaAcademica);
+
+        [OperationContract]
+        bool modificarFechaCierre(int idTutoria, DateTime FechaCierre);
     }
 }

@@ -22,7 +22,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
     /// </summary>
     public partial class WindowAsignarTutor : Window
     {
-        RolesAcademicos[] tutoresObtenidosBD;
+        DatosTutor[] tutoresObtenidosBD;
         string matriculaR;
         public WindowAsignarTutor(string matricula)
         {
@@ -44,15 +44,16 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         {
             using (var conexionServicios = new Service1Client())
             {
-                RolesAcademicos[] tutoresObtenidos = await conexionServicios.obtenerTutoresAsync();
+                DatosTutor[] tutoresObtenidos = await conexionServicios.obtenerTutoresAsync();
                 tutoresObtenidosBD = tutoresObtenidos;
                 ObservableCollection<string> listaTutores = new ObservableCollection<string>();
 
-                foreach (RolesAcademicos tutor in tutoresObtenidos)
+                foreach (DatosTutor tutor in tutoresObtenidos)
                 {
-                    int idRol = tutor.IDRolAcademico;
-                    string numPersonal = tutor.IDRolAcademico.ToString();
-                    string formatoTutores = $"{numPersonal}";
+                    string idRol = tutor.academicoTutor.NumPersonal;
+                    string nombre = tutor.academicoTutor.Nombres;
+                    int idRolAcademico = tutor.rolAcademicoTutor.IDRolAcademico;
+                    string formatoTutores = $"{idRolAcademico} - {nombre.ToString()} - {idRol.ToString()}";
                     listaTutores.Add(formatoTutores);
                 }
 
@@ -83,12 +84,14 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
         {
             if (cbTutor.SelectedIndex != -1)
             {
-                string itemSeleccionado = cbTutor.SelectedItem.ToString();
-                int tutor = int.Parse(itemSeleccionado);
+                //Da error en la linea siguiente 
+                DatosTutor itemSeleccionado = (DatosTutor)cbTutor.SelectedItem;
+                //string itemSeleccionado = cbTutor.SelectedItem.ToString();
+                int tutor = itemSeleccionado.rolAcademicoTutor.IDRolAcademico;
                 return tutor;
             }
-
+            
             return -1; //Por si no se ha seleccionado ningún programa educativo
-        }
+        }   
     }
 }

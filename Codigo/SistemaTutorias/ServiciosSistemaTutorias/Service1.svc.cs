@@ -78,7 +78,7 @@ namespace ServiciosSistemaTutorias
             return EstudianteDAO.asignarTutor(matricula, idTutor);
         }
 
-        public List<RolesAcademicos> obtenerTutores()
+        public DatosTutor[] obtenerTutores()
         {
             return RolesAcademicosDAO.obtenerTutores();
         }
@@ -86,6 +86,11 @@ namespace ServiciosSistemaTutorias
         public DatosProblematicaAcademica[] obtenerProblematicasAcademicas(int IDTutoriaAcademica)
         {
             return ProblematicasAcademicasDAO.obtenerProblematicasAcademicas(IDTutoriaAcademica);
+        }
+
+        public bool modificarFechaCierre(int idTutoria, DateTime FechaCierre)
+        {
+            return TutoriasAcademicasDAO.modificarFechaCierre(idTutoria, FechaCierre);
         }
     }
 }
