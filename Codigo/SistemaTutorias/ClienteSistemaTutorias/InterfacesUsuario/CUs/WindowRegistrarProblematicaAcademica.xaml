@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario.CUs"
         mc:Ignorable="d"
-        Title="Registrar Problematica Academica" Height="450" Width="800">
+        Title="Registrar Problematica Academica" Height="450" Width="800"
+        Icon="..\..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow">
     <Grid>
         <Label Content="Descripción:" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" FontSize="20" Width="121"/>
         <Button x:Name="btRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="634,368,0,0" VerticalAlignment="Top" FontSize="16" Width="120" Height="35" Click="ButtonRegistrar_Click"/>

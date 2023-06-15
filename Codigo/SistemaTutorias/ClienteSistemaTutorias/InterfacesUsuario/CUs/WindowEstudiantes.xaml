@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:ClienteSistemaTutorias.InterfacesUsuario"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Estudiantes" Height="450" Width="800">
+        WindowStyle="SingleBorderWindow"
+        Title="Estudiantes" Height="450" Width="800" Icon="..\..\Resources/1200px-Logo_de_la_Universidad_Veracruzana.svg.png">
     <Grid>
         <DataGrid x:Name="dgEstudiantes" AutoGenerateColumns="False" Margin="0,38,160,0" CanUserAddRows="False" FontSize="16">
             <DataGrid.Columns>
