@@ -107,5 +107,10 @@ namespace ServiciosSistemaTutorias
         {
             return ProblematicasAcademicasDAO.registrarProblematicaAcademica(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
         }
+
+        public  ReportesTutoria obtenerReporte(int idRolAcademico, int numSesion, int idPeriodo)
+        {
+            return ReportesTutoriaDAO.obtenerReporte(idRolAcademico, numSesion, idPeriodo);
+        }
     }
 }

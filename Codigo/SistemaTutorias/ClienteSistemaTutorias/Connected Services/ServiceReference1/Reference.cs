@@ -1886,6 +1886,9 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarProblematicaAcademica", ReplyAction="http://tempuri.org/IService1/registrarProblematicaAcademicaResponse")]
         System.Threading.Tasks.Task<bool> registrarProblematicaAcademicaAsync(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerReporte", ReplyAction="http://tempuri.org/IService1/obtenerReporteResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.ReportesTutoria> obtenerReporteAsync(int idRolAcademico, int numSesion, int idPeriodo);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -2031,6 +2034,11 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<bool> registrarProblematicaAcademicaAsync(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion)
         {
             return base.Channel.registrarProblematicaAcademicaAsync(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.ReportesTutoria> obtenerReporteAsync(int idRolAcademico, int numSesion, int idPeriodo)
+        {
+            return base.Channel.obtenerReporteAsync(idRolAcademico, numSesion, idPeriodo);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
