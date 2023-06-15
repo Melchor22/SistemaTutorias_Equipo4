@@ -2035,7 +2035,11 @@ namespace ServiceReference1
         {
             return base.Channel.registrarProblematicaAcademicaAsync(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
         }
-        
+        public System.Threading.Tasks.Task<bool> registrarSolucionProblematicaAcademicaAsync(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string solucion)
+        {
+            return base.Channel.registrarProblematicaAcademicaAsync(IDTutoria, matriculaEstudiante, IDCategoria, NRC, solucion);
+        }
+
         public System.Threading.Tasks.Task<ServiceReference1.ReportesTutoria> obtenerReporteAsync(int idRolAcademico, int numSesion, int idPeriodo)
         {
             return base.Channel.obtenerReporteAsync(idRolAcademico, numSesion, idPeriodo);

@@ -41,9 +41,9 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
             ventanaRegistrarProblematicaAcademica.Show();
         }
 
-        private void btSolucion_Click(object sender, RoutedEventArgs e)
-        {
+    
 
-        }
+   
+      
     }
 }

@@ -103,7 +103,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
                 bool registroExitoso = await resultadoOperacion;
                 if (registroExitoso)
                 {
-                    MessageBox.Show("Tutoria Registrada Exitosamente.");
+                    MessageBox.Show("Problematica Registrada Exitosamente.");
                 }
                 else
                 {

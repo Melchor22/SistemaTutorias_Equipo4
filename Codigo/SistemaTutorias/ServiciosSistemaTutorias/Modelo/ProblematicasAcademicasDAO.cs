@@ -69,6 +69,8 @@ namespace ServiciosSistemaTutorias.Modelo
             return problematicaBD.ToArray();
         }
 
+        
+
         public static bool registrarProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion)
         {
             try

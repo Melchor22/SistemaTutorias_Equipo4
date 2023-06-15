@@ -22,6 +22,9 @@
     <Compile Update="InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarSolucionProblematicaAcademica.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -67,6 +70,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\CUs\WindowModificarSesionTutoria.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowRegistrarSolucionProblematicaAcademica.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml">
