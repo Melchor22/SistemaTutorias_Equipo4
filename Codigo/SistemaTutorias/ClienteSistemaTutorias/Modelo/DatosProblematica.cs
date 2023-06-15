@@ -36,8 +36,5 @@ namespace ClienteSistemaTutorias.Modelo
 
         [DataMember]
         public string descripcion { get; set; }
-
-        [DataMember]
-        public string solucion { get; set;}
     }
 }

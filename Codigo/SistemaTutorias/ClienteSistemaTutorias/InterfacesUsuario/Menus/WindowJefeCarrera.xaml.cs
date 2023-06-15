@@ -32,8 +32,6 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private void btReporteTutoria_Click(object sender, RoutedEventArgs e)
         {
-            WindowReporteTutoriaPorTutor ventanaReportePorTutor = new WindowReporteTutoriaPorTutor();
-            ventanaReportePorTutor.Show();
 
         }
 
@@ -44,9 +42,7 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private void btCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
-            WindowInicioSesion ventanaInicioSesion = new WindowInicioSesion();
-            ventanaInicioSesion.Show();
-            Close();
+
         }
     }
 }

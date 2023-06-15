@@ -22,13 +22,10 @@
     <Compile Update="InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarSolucionProblematicaAcademica.xaml.cs">
+    <Compile Update="InterfacesUsuario\CUs\WindowRegistrarSolucion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="InterfacesUsuario\CUs\WindowReporteTutoriaPorTutor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="InterfacesUsuario\CUs\WindowSesionesTutoriaCierreReporte.xaml.cs">
@@ -72,13 +69,10 @@
     <Page Update="InterfacesUsuario\CUs\WindowModificarSesionTutoria.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="InterfacesUsuario\CUs\WindowRegistrarSolucionProblematicaAcademica.xaml">
+    <Page Update="InterfacesUsuario\CUs\WindowRegistrarSolucion.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="InterfacesUsuario\CUs\WindowReporteTutoriaPorTutor.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\CUs\WindowSesionesTutoriaCierreReporte.xaml">

@@ -41,9 +41,58 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
             ventanaRegistrarProblematicaAcademica.Show();
         }
 
-    
+        private async void btVerSolucion_Click(object sender, RoutedEventArgs e)
+        {
+            DatosProblematica problematicaSeleccionada = (DatosProblematica)dgProblematicasAcademicas.SelectedItem;
+            int IDProblematicaSeleccionada = problematicaSeleccionada.IDProblematicaAcademica;
 
-   
-      
+            if (dgProblematicasAcademicas.SelectedItem != null)
+            {
+                string solucionObtenida = await obtenerSoluciones(IDProblematicaSeleccionada);
+                if (solucionObtenida == null)
+                {
+                    return;
+                }
+                MessageBox.Show("Solución: " + solucionObtenida);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una problematica para Continuar.");
+                return;
+            }
+        }
+
+        private async Task<string> obtenerSoluciones(int IDProblematicaSeleccionada)
+        {
+            string solucionProblematicaSeleccionada;
+
+            using (var conexionServicios = new Service1Client())
+            {
+                solucionProblematicaSeleccionada = await conexionServicios.obtenerSolucionProblematicaAsync(IDProblematicaSeleccionada);
+            }
+            if (solucionProblematicaSeleccionada == null)
+            {
+                return "Sin Solución";
+            }
+            else
+            {
+                return solucionProblematicaSeleccionada;
+            }
+        }
+
+        private void btRegistrarSolucion_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgProblematicasAcademicas.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione una problematica para Continuar.");
+            }
+            else
+            {
+                DatosProblematica problematicaSeleccionada = (DatosProblematica)dgProblematicasAcademicas.SelectedItem;
+                int IDProblematicaSeleccionada = problematicaSeleccionada.IDProblematicaAcademica;
+                WindowRegistrarSolucion ventanaRegistrarSolucion = new WindowRegistrarSolucion(IDProblematicaSeleccionada);
+                ventanaRegistrarSolucion.Show();
+            }
+        }
     }
 }

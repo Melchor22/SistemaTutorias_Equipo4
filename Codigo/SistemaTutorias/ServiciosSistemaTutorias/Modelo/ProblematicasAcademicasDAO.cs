@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -69,8 +70,6 @@ namespace ServiciosSistemaTutorias.Modelo
             return problematicaBD.ToArray();
         }
 
-        
-
         public static bool registrarProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion)
         {
             try
@@ -94,6 +93,38 @@ namespace ServiciosSistemaTutorias.Modelo
             {
                 return false;
             }
+        }
+
+        public static string obtenerSolucionProblematica(int IDProblematica)
+        {
+            DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+            var problematicaObtenida = (from problematica in conexionBD.ProblematicasAcademicas
+                                   where problematica.IDProblematicaAcademica == IDProblematica
+                                   select problematica).FirstOrDefault();
+            string solucionObtenida = problematicaObtenida.Solucion;
+            return solucionObtenida;
+        }
+
+        public static bool registrarSolucionProblematica(int IDProblematica, string solucion)
+        {
+            DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+            var problematicaObtenida = (from problematica in conexionBD.ProblematicasAcademicas
+                                        where problematica.IDProblematicaAcademica == IDProblematica
+                                        select problematica).FirstOrDefault();
+
+            problematicaObtenida.Solucion = solucion;
+
+            try
+            {
+                conexionBD.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+
         }
 
         public static DataClassesSistemaTutoriasDataContext getConnection()

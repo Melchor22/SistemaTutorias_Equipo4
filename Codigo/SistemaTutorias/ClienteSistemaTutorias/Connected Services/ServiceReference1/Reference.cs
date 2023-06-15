@@ -1887,8 +1887,11 @@ namespace ServiceReference1
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarProblematicaAcademica", ReplyAction="http://tempuri.org/IService1/registrarProblematicaAcademicaResponse")]
         System.Threading.Tasks.Task<bool> registrarProblematicaAcademicaAsync(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerReporte", ReplyAction="http://tempuri.org/IService1/obtenerReporteResponse")]
-        System.Threading.Tasks.Task<ServiceReference1.ReportesTutoria> obtenerReporteAsync(int idRolAcademico, int numSesion, int idPeriodo);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/obtenerSolucionProblematica", ReplyAction="http://tempuri.org/IService1/obtenerSolucionProblematicaResponse")]
+        System.Threading.Tasks.Task<string> obtenerSolucionProblematicaAsync(int IDProblematica);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/registrarSolucionProblematica", ReplyAction="http://tempuri.org/IService1/registrarSolucionProblematicaResponse")]
+        System.Threading.Tasks.Task<bool> registrarSolucionProblematicaAsync(int IDProblematica, string solucion);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -2035,14 +2038,15 @@ namespace ServiceReference1
         {
             return base.Channel.registrarProblematicaAcademicaAsync(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
         }
-        public System.Threading.Tasks.Task<bool> registrarSolucionProblematicaAcademicaAsync(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string solucion)
+        
+        public System.Threading.Tasks.Task<string> obtenerSolucionProblematicaAsync(int IDProblematica)
         {
-            return base.Channel.registrarProblematicaAcademicaAsync(IDTutoria, matriculaEstudiante, IDCategoria, NRC, solucion);
+            return base.Channel.obtenerSolucionProblematicaAsync(IDProblematica);
         }
-
-        public System.Threading.Tasks.Task<ServiceReference1.ReportesTutoria> obtenerReporteAsync(int idRolAcademico, int numSesion, int idPeriodo)
+        
+        public System.Threading.Tasks.Task<bool> registrarSolucionProblematicaAsync(int IDProblematica, string solucion)
         {
-            return base.Channel.obtenerReporteAsync(idRolAcademico, numSesion, idPeriodo);
+            return base.Channel.registrarSolucionProblematicaAsync(IDProblematica, solucion);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

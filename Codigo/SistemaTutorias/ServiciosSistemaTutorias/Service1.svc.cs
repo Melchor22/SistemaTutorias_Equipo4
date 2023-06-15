@@ -87,7 +87,6 @@ namespace ServiciosSistemaTutorias
         {
             return ProblematicasAcademicasDAO.obtenerProblematicasAcademicas(IDTutoriaAcademica);
         }
-     
 
         public bool modificarFechaCierre(int idTutoria, DateTime FechaCierre)
         {
@@ -98,7 +97,6 @@ namespace ServiciosSistemaTutorias
         {
             return EstudianteDAO.obtenerEstudiantesPorTutoria(IDTutoriaAcademica);
         }
-        
 
         public List<CategoriasProblematica> obtenerCategoriasProblematica()
         {
@@ -110,19 +108,14 @@ namespace ServiciosSistemaTutorias
             return ProblematicasAcademicasDAO.registrarProblematicaAcademica(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
         }
 
-        public  ReportesTutoria obtenerReporte(int idRolAcademico, int numSesion, int idPeriodo)
+        public string obtenerSolucionProblematica(int IDProblematica)
         {
-            return ReportesTutoriaDAO.obtenerReporte(idRolAcademico, numSesion, idPeriodo);
+            return ProblematicasAcademicasDAO.obtenerSolucionProblematica(IDProblematica);
         }
 
-        public DatosProblematicaAcademica[] obtenerSolucionProblematicaAcademica(int IDProblematicaAcademica)
+        public bool registrarSolucionProblematica(int IDProblematica, string solucion)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool registrarSolucionProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string solucion)
-        {
-            throw new NotImplementedException();
+            return ProblematicasAcademicasDAO.registrarSolucionProblematica(IDProblematica, solucion);
         }
     }
 }

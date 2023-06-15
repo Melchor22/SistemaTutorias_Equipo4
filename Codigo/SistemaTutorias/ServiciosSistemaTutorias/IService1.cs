@@ -60,9 +60,6 @@ namespace ServiciosSistemaTutorias
         DatosProblematicaAcademica[] obtenerProblematicasAcademicas(int IDTutoriaAcademica);
 
         [OperationContract]
-        DatosProblematicaAcademica[] obtenerSolucionProblematicaAcademica(int IDProblematicaAcademica);
-
-        [OperationContract]
         bool modificarFechaCierre(int idTutoria, DateTime FechaCierre);
 
         [OperationContract]
@@ -75,10 +72,9 @@ namespace ServiciosSistemaTutorias
         bool registrarProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string descripcion);
 
         [OperationContract]
-        ReportesTutoria obtenerReporte(int idRolAcademico, int numSesion, int idPeriodo);
+        string obtenerSolucionProblematica(int IDProblematica);
 
         [OperationContract]
-        bool registrarSolucionProblematicaAcademica(int IDTutoria, string matriculaEstudiante, int IDCategoria, int NRC, string solucion);
-
+        bool registrarSolucionProblematica(int IDProblematica, string solucion);
     }
 }
