@@ -51,10 +51,6 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         }
 
-        private void btProblematica_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
