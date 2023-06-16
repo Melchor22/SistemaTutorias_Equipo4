@@ -101,7 +101,8 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
                 reporteObtenido = reporteObtenidoBD;
                 if (reporteObtenido != null)
                 {
-                    MessageBox.Show(reporteObtenido.Descripcion + "\n" + reporteObtenido.ComentarioGeneral);
+                    WindowReporteTutor ventanaReportePorTutor = new WindowReporteTutor(reporteObtenidoBD.Descripcion, reporteObtenidoBD.ComentarioGeneral);
+                    ventanaReportePorTutor.Show();
                 }
                 else
                 {
