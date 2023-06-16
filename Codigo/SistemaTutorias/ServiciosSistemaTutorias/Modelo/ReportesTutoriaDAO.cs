@@ -31,6 +31,29 @@ namespace ServiciosSistemaTutorias.Modelo
                 return false;
             }
         }
+
+        public static ReportesTutoria obtenerReporte(int idRolAcademico, int numSesion, int idPeriodo)
+        {
+            DataClassesSistemaTutoriasDataContext conexionBD = getConnection();
+
+            var reporteTutor = (from reporte in conexionBD.ReportesTutoria
+                                join tutoriaAcademicaBD in conexionBD.TutoriasAcademicas on reporte.IDTutoriaAcademica equals tutoriaAcademicaBD.IDTutoriaAcademica
+                                join rolAcademicoBD in conexionBD.RolesAcademicos on tutoriaAcademicaBD.IDRolAcademico equals rolAcademicoBD.IDRolAcademico
+                                where tutoriaAcademicaBD.NumSesion == numSesion || tutoriaAcademicaBD.IDPeriodoEscolar == idPeriodo || rolAcademicoBD.IDRolAcademico == idRolAcademico
+                                select reporte).FirstOrDefault();
+
+            ReportesTutoria reporteObtenido = new ReportesTutoria()
+            {
+                IDTutoriaAcademica = reporteTutor.IDTutoriaAcademica,
+                Descripcion = reporteTutor.Descripcion,
+                ComentarioGeneral = reporteTutor.ComentarioGeneral,
+                IDReporteTutoria = reporteTutor.IDReporteTutoria
+            };
+
+            return reporteObtenido;
+        }
+
+
         public static DataClassesSistemaTutoriasDataContext getConnection()
         {
             return new DataClassesSistemaTutoriasDataContext(global::System.Configuration.ConfigurationManager.ConnectionStrings["SistemaTutoriasConnectionString"].ConnectionString);

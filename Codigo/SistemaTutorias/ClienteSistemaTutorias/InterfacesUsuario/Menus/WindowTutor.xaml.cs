@@ -45,9 +45,5 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             Close();
         }
 
-        private void btReportesTutoria_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

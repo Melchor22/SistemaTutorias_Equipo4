@@ -28,6 +28,9 @@
     <Compile Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="InterfacesUsuario\CUs\WindowReporteTutoriaPorTutor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="InterfacesUsuario\CUs\WindowSesionesTutoriaCierreReporte.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -73,6 +76,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterfacesUsuario\CUs\WindowReporteTutoriaPorTutor.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="InterfacesUsuario\CUs\WindowSesionesTutoriaCierreReporte.xaml">

@@ -76,5 +76,8 @@ namespace ServiciosSistemaTutorias
 
         [OperationContract]
         bool registrarSolucionProblematica(int IDProblematica, string solucion);
+
+        [OperationContract]
+        ReportesTutoria obtenerReporte(int idRolAcademico, int numSesion, int idPeriodo);
     }
 }

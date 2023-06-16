@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace ClienteSistemaTutorias.Modelo
 {
     [DataContract]
-    internal class DatosTutor
+    internal class DatosTutorAcademico
     {
         [DataMember]
-        public string idRolAcademico { get; set; }
+        public int idRolAcademico { get; set; }
 
         [DataMember]
         public string numPersonal { get; set; }
