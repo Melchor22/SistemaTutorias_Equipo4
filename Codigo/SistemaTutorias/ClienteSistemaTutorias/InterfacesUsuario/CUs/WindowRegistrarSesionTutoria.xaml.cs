@@ -45,16 +45,23 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             bool validacion = VerificarCampos(fechaObtenida, horaObtenida);
             if (validacion)
             {
+                DateTime fecha;
+                DateTime hora;
 
-                DateTime fecha = DateTime.ParseExact(fechaObtenida, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                DateTime hora = DateTime.ParseExact(horaObtenida, "HH:mm", CultureInfo.InvariantCulture);
-                DateTime fechaHora = new DateTime(fecha.Year, fecha.Month, fecha.Day, hora.Hour, hora.Minute, hora.Second);
+                if (DateTime.TryParseExact(fechaObtenida, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out fecha) &&
+                    DateTime.TryParseExact(horaObtenida, "HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out hora))
+                {
+                    DateTime fechaHora = new DateTime(fecha.Year, fecha.Month, fecha.Day, hora.Hour, hora.Minute, hora.Second);
 
+                    int numSesionRegistro = int.Parse(cbNumSesion.SelectedItem.ToString());
+                    PeriodosEscolares periodoSeleccionado = periodosEscolaresObtenidos[cbPeriodoEscolar.SelectedIndex];
 
-                int numSesionRegistro = int.Parse(cbNumSesion.SelectedItem.ToString());
-                PeriodosEscolares periodoSeleccionado = periodosEscolaresObtenidos[cbPeriodoEscolar.SelectedIndex];
-
-                RegistrarSesionTutoria(fechaHora, numSesionRegistro, periodoSeleccionado);
+                    RegistrarSesionTutoria(fechaHora, numSesionRegistro, periodoSeleccionado);
+                }
+                else
+                {
+                    MessageBox.Show("La fecha y/o hora ingresadas no son válidas.");
+                }
             }
             else
             {

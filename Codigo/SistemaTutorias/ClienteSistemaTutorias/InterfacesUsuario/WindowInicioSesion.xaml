@@ -12,7 +12,7 @@
         <Label Content="Usuario:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="60,217,0,0"/>
         <Label Content="Contraseña:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,272,0,0" FontSize="20"/>
         <TextBox x:Name="tbUsername" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Margin="160,217,0,0" FontSize="20"/>
-        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Margin="160,276,0,0" FontSize="20"/>
+        <PasswordBox x:Name="tbPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="160,276,0,0" FontSize="20"/>
         <Image HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="132" Margin="158,25,0,0" Source="..\Resources\1200px-Logo_de_la_Universidad_Veracruzana.svg.png" Stretch="UniformToFill"/>
         <Button x:Name="btInicioSesion" Content="Iniciar Sesión" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,334,0,0" FontSize="16" Width="130" Height="35" Click="btInicioSesion_Click"/>
     </Grid>

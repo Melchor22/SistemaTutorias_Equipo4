@@ -30,7 +30,7 @@ namespace ClienteSistemaTutorias
         private void btInicioSesion_Click(object sender, RoutedEventArgs e)
         {
             string username = tbUsername.Text;
-            string password = tbPassword.Text;
+            string password = tbPassword.Password;
             if ((username.Length > 0 && password.Length > 0) && (username != null && password != null))
             {
                 VerificarInicioSesion(username, password);

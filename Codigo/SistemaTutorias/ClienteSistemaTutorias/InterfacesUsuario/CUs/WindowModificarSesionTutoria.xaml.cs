@@ -77,15 +77,31 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
             if (validacion)
             {
 
-                DateTime fecha = DateTime.ParseExact(fechaObtenida, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                DateTime hora = DateTime.ParseExact(horaObtenida, "HH:mm", CultureInfo.InvariantCulture);
-                DateTime fechaHora = new DateTime(fecha.Year, fecha.Month, fecha.Day, hora.Hour, hora.Minute, hora.Second);
+                DateTime fecha;
+                DateTime hora;
 
+                if (DateTime.TryParseExact(fechaObtenida, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out fecha) &&
+                    DateTime.TryParseExact(horaObtenida, "HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out hora))
+                {
+                    DateTime fechaHora = new DateTime(fecha.Year, fecha.Month, fecha.Day, hora.Hour, hora.Minute, hora.Second);
 
-                int numSesionRegistro = int.Parse(cbNumSesion.SelectedItem.ToString());
-                PeriodosEscolares periodoSeleccionado = periodosEscolaresObtenidos[cbPeriodoEscolar.SelectedIndex];
+                    int numSesionRegistro;
+                    bool numSesionValido = int.TryParse(cbNumSesion.SelectedItem.ToString(), out numSesionRegistro);
 
-                modificarSesionTutoria(fechaHora, numSesionRegistro, periodoSeleccionado);
+                    if (numSesionValido)
+                    {
+                        PeriodosEscolares periodoSeleccionado = periodosEscolaresObtenidos[cbPeriodoEscolar.SelectedIndex];
+                        modificarSesionTutoria(fechaHora, numSesionRegistro, periodoSeleccionado);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El número de sesión no es válido.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La fecha y/o hora ingresadas no son válidas.");
+                }
             }
             else
             {

@@ -31,24 +31,31 @@ namespace ClienteSistemaTutorias.InterfacesUsuario
 
         private async void btGuardar_Click(object sender, RoutedEventArgs e)
         {
-            string Descripcion = tbComentarioGeneral.Text;
-            string ComentariosGenerales = tbComentarioGeneral.Text;
 
-            using (var conexionServicios = new Service1Client())
+            if (!string.IsNullOrEmpty(tbDescripcion.Text))
             {
-                Task<bool> resultadoOperacion = conexionServicios.registrarReporteTutoriaAsync(Descripcion, ComentariosGenerales, IDTutoriaAcademica);
-                bool registroExitoso = await resultadoOperacion;
-                if (registroExitoso)
-                {
-                    MessageBox.Show("Reporte Regsitrado Exitosamente.");
-                }
-                else
-                {
-                    MessageBox.Show("Ocurrio un error en el registro.");
-                }
-            }
+                string Descripcion = tbDescripcion.Text;
+                string ComentariosGenerales = tbComentarioGeneral.Text;
 
+                using (var conexionServicios = new Service1Client())
+                {
+                    Task<bool> resultadoOperacion = conexionServicios.registrarReporteTutoriaAsync(Descripcion, ComentariosGenerales, IDTutoriaAcademica);
+                    bool registroExitoso = await resultadoOperacion;
+                    if (registroExitoso)
+                    {
+                        MessageBox.Show("Reporte Regsitrado Exitosamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocurrio un error en el registro.");
+                    }
+                }
                 Close();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese la Descripción para continuar.");
+            }
         }
     }
 }

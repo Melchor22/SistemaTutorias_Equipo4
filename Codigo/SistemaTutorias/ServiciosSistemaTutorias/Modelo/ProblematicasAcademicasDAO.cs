@@ -113,6 +113,7 @@ namespace ServiciosSistemaTutorias.Modelo
                                         select problematica).FirstOrDefault();
 
             problematicaObtenida.Solucion = solucion;
+            problematicaObtenida.Estado = "Resuelto";
 
             try
             {

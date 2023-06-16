@@ -35,20 +35,27 @@ namespace ClienteSistemaTutorias.InterfacesUsuario.CUs
 
         private void ButtonRegistrar_Click(object sender, RoutedEventArgs e)
         {
-            int IDTutoria = tutoriaSeleccionada.tutoria.IDTutoriaAcademica;
+            if (string.IsNullOrWhiteSpace(tbNRC.Text) || string.IsNullOrWhiteSpace(tbDescripcion.Text) ||
+                cbEstudiantes.SelectedIndex == -1 || cbCategoria.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ingrese los datos solicitados para continuar.");
+            }
+            else
+            {
+                int IDTutoria = tutoriaSeleccionada.tutoria.IDTutoriaAcademica;
 
-            Estudiantes estudianteSeleccionado = estudiantesObtenidosBD[cbEstudiantes.SelectedIndex];
-            string matriculaEstudiante = estudianteSeleccionado.Matricula;
+                Estudiantes estudianteSeleccionado = estudiantesObtenidosBD[cbEstudiantes.SelectedIndex];
+                string matriculaEstudiante = estudianteSeleccionado.Matricula;
 
-            CategoriasProblematica categoriaSeleccionada = categoriasObtenidasBD[cbCategoria.SelectedIndex];
-            int IDCategoria = categoriaSeleccionada.IDCategoria;
+                CategoriasProblematica categoriaSeleccionada = categoriasObtenidasBD[cbCategoria.SelectedIndex];
+                int IDCategoria = categoriaSeleccionada.IDCategoria;
 
-            int NRC = Int32.Parse(tbNRC.Text);
+                int NRC = Int32.Parse(tbNRC.Text);
 
-            string descripcion = tbDescripcion.Text;
+                string descripcion = tbDescripcion.Text;
 
-            RegistrarProblematica(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
-
+                RegistrarProblematica(IDTutoria, matriculaEstudiante, IDCategoria, NRC, descripcion);
+            }
         }
 
         private void llenarCampos(TutoriaPeriodo tutoriaSeleccionada)
