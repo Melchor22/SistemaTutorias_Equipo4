@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\
+C:\Users\PC\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\obj\Debug\net6.0-windows\
 ClienteSistemaTutorias
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\marqu\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\App.xaml
-17656538685
+C:\Users\PC\OneDrive\Documentos\GitHub\SistemaTutorias_Equipo4\Codigo\SistemaTutorias\ClienteSistemaTutorias\App.xaml
+18-1466172763
 
-32-1413845511
-208-1075383708
-InterfacesUsuario\CUs\WindowAsignarTutor.xaml;InterfacesUsuario\CUs\WindowEstudiantes.xaml;InterfacesUsuario\CUs\WindowModificarSesionTutoria.xaml;InterfacesUsuario\CUs\WindowProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarEstudiante.xaml;InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.xaml;InterfacesUsuario\CUs\WindowRegistrarSolucion.xaml;InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml;InterfacesUsuario\CUs\WindowReporteTutoria.xaml;InterfacesUsuario\CUs\WindowReporteTutoriaPorTutor.xaml;InterfacesUsuario\CUs\WindowSesionesTutoria.xaml;InterfacesUsuario\CUs\WindowSesionesTutoriaCierreReporte.xaml;InterfacesUsuario\Menus\WindowCoordinador.xaml;InterfacesUsuario\Menus\WindowJefeCarrera.xaml;InterfacesUsuario\Menus\WindowTutor.xaml;InterfacesUsuario\WindowInicioSesion.xaml;
+33-51175342
+208590159382
+InterfacesUsuario\CUs\WindowAsignarTutor.xaml;InterfacesUsuario\CUs\WindowEstudiantes.xaml;InterfacesUsuario\CUs\WindowModificarSesionTutoria.xaml;InterfacesUsuario\CUs\WindowProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarEstudiante.xaml;InterfacesUsuario\CUs\WindowRegistrarProblematicaAcademica.xaml;InterfacesUsuario\CUs\WindowRegistrarSesionTutoria.xaml;InterfacesUsuario\CUs\WindowRegistrarSolucion.xaml;InterfacesUsuario\CUs\WindowRegistrarTutorAcademico.xaml;InterfacesUsuario\CUs\WindowReporteTutor.xaml;InterfacesUsuario\CUs\WindowReporteTutoria.xaml;InterfacesUsuario\CUs\WindowReporteTutoriaPorTutor.xaml;InterfacesUsuario\CUs\WindowSesionesTutoria.xaml;InterfacesUsuario\CUs\WindowSesionesTutoriaCierreReporte.xaml;InterfacesUsuario\Menus\WindowCoordinador.xaml;InterfacesUsuario\Menus\WindowJefeCarrera.xaml;InterfacesUsuario\Menus\WindowTutor.xaml;InterfacesUsuario\WindowInicioSesion.xaml;
 
 False
 
